@@ -1,8 +1,10 @@
+import type { SVGProps } from 'react';
+
 const social = [
   {
     name: 'Facebook',
     href: '#',
-    icon: (props) => (
+    icon: (props: SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
           fillRule="evenodd"
@@ -15,7 +17,7 @@ const social = [
   {
     name: 'Instagram',
     href: '#',
-    icon: (props) => (
+    icon: (props: SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
           fillRule="evenodd"
@@ -28,7 +30,7 @@ const social = [
   {
     name: 'YouTube',
     href: '#',
-    icon: (props) => (
+    icon: (props: SVGProps<SVGSVGElement>) => (
       <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
         <path
           fillRule="evenodd"
