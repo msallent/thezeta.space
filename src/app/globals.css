@@ -2,16 +2,17 @@
 
 @plugin 'tailwindcss-animate';
 
-@theme {
+@theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-tertiary: var(--tertiary);
+  --color-destructive: var(--destructive);
 }
-
 :root {
   --primary: hsl(0 0% 9%);
   --secondary: hsl(0 0% 96.1%);
   --tertiary: #d3dcde;
+  --destructive: hsl(0 84.2% 60.2%);
 }
 
 body {

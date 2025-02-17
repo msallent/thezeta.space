@@ -2,7 +2,7 @@ import { MoveRight } from 'lucide-react';
 
 export function About() {
   return (
-    <div className="relative">
+    <section className="relative">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -top-40 transform-gpu overflow-hidden blur-3xl"
@@ -54,6 +54,6 @@ export function About() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

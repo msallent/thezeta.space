@@ -1,4 +1,4 @@
-import { Globe, Handshake, Megaphone, MessageSquareHeart, Rocket, Video } from 'lucide-react';
+import { Globe, Handshake, Megaphone, MessageSquareHeart, Palette, Video } from 'lucide-react';
 
 export const services = [
   {
@@ -23,7 +23,7 @@ export const services = [
     ],
   },
   {
-    Icon: Rocket,
+    Icon: Palette,
     title: 'Identidad de marca & Branding',
     description: [
       'Creamos marcas que no pasan desapercibidas: Logos memorables, colores y tipografías que hablan de vos. Diseñamos una identidad visual única que conecta con tu audiencia y deja huella en el mundo digital.',
@@ -31,14 +31,14 @@ export const services = [
   },
   {
     Icon: Video,
-    title: 'Generación de contenido',
+    title: 'Generación de Contenido',
     description: [
       'Realizamos producciones en interior y exterior, creando imágenes y videos que transmiten emociones, cuentan tu historia y hacen que tus productos y servicios brillen como nunca.',
     ],
   },
   {
     Icon: Handshake,
-    title: 'Asesoramiento 1:1 y capacitaciones',
+    title: 'Asesoramiento 1:1 y Capacitaciones',
     description: [
       'Convertimos tus desafíos en oportunidades. Ya sea para tu negocio o para tu marca personal, creamos estrategias a medida, con insights claros y soluciones prácticas que te ayudan a brillar en el mundo digital. Porque el éxito se logra con ideas claras y acciones concretas.',
     ],

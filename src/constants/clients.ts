@@ -1,5 +1,5 @@
 import actLogo from '@/assets/images/act.png';
-import cecbaLogo from '@/assets/images/cecba.png';
+import fcecbaLogo from '@/assets/images/fcecba.png';
 import chilleoutLogo from '@/assets/images/chilleout.png';
 import cnaLogo from '@/assets/images/cna.png';
 import divanlitoLogo from '@/assets/images/divanlito.png';
@@ -9,15 +9,12 @@ import edenorLogo from '@/assets/images/edenor.png';
 import mirLogo from '@/assets/images/mir.png';
 import southernCrossLogo from '@/assets/images/southern-cross.png';
 import taishiLogo from '@/assets/images/taishi.png';
+import voyerLogo from '@/assets/images/voyer.png';
 
 export const clients = [
   {
     name: 'Advanced Cell Therapy',
     logo: actLogo,
-  },
-  {
-    name: 'Fundacion Colegio de Escribanos',
-    logo: cecbaLogo,
   },
   {
     name: 'Chilleout',
@@ -44,6 +41,10 @@ export const clients = [
     logo: edenorLogo,
   },
   {
+    name: 'Fundacion Colegio de Escribanos',
+    logo: fcecbaLogo,
+  },
+  {
     name: 'Market de Inversiones',
     logo: mirLogo,
   },
@@ -54,5 +55,9 @@ export const clients = [
   {
     name: 'Taishi Consulting',
     logo: taishiLogo,
+  },
+  {
+    name: 'Voyer',
+    logo: voyerLogo,
   },
 ];

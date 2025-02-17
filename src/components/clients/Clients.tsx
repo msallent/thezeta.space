@@ -7,7 +7,7 @@ import { clients } from '@/constants/clients';
 
 export function Clients() {
   return (
-    <div className="py-24 sm:py-32">
+    <section className="py-24 sm:py-32">
       <div className="mx-auto px-6 lg:px-8">
         <h2 id="clientes" className="-mt-10 pt-10 text-center text-xl/8 font-semibold text-white">
           Clientes que confían en nosotros
@@ -27,6 +27,6 @@ export function Clients() {
           </CarouselContent>
         </Carousel>
       </div>
-    </div>
+    </section>
   );
 }

@@ -16,11 +16,14 @@ import { Input } from '@/components/ui/input';
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
 
 const formSchema = z.object({
   name: z.string().min(1, 'Nombre requerido'),
@@ -47,7 +50,7 @@ export function Contact() {
   };
 
   return (
-    <div className="relative isolate px-6 py-24 sm:py-32 lg:px-8">
+    <section className="relative isolate px-6 py-24 sm:py-32 lg:px-8">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-20 -z-10 transform-gpu overflow-hidden blur-3xl"
@@ -69,8 +72,8 @@ export function Contact() {
           Impulsamos marcas con creatividad y resultados
         </h2>
 
-        <p className="text-tertiary mt-2 text-lg/8">
-          We help companies and individuals build out their brand guidelines.
+        <p className="text-tertiary mt-2 font-[family-name:var(--font-glacial)] text-lg/7">
+          Listo para empezar? Completá el formulario y te contactamos.
         </p>
 
         <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
@@ -124,7 +127,7 @@ export function Contact() {
                   control={form.control}
                   render={({ field: { onChange, value, ...rest } }) => (
                     <FormItem>
-                      <FormLabel>Servicio</FormLabel>
+                      <FormLabel>Pack / Servicio</FormLabel>
                       <Select onValueChange={onChange} defaultValue={value} {...rest}>
                         <FormControl>
                           <SelectTrigger>
@@ -132,11 +135,20 @@ export function Contact() {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="social-media">Social Media & Paid Media</SelectItem>
-                          <SelectItem value="desarrollo-web">Diseño & Desarrollo Web</SelectItem>
-                          <SelectItem value="branding">Branding</SelectItem>
-                          <SelectItem value="contenido">Generación de contenido</SelectItem>
-                          <SelectItem value="asesoramiento">Asesoramiento</SelectItem>
+                          <SelectGroup>
+                            <SelectLabel>Packs</SelectLabel>
+                            <SelectItem value="launch-pack">Launch Pack</SelectItem>
+                            <SelectItem value="booster-pack">Booster Pack</SelectItem>
+                            <SelectItem value="premium-pack">Premium Pack</SelectItem>
+                          </SelectGroup>
+                          <SelectGroup>
+                            <SelectLabel>Servicios</SelectLabel>
+                            <SelectItem value="social-media">Social Media & Paid Media</SelectItem>
+                            <SelectItem value="desarrollo-web">Diseño & Desarrollo Web</SelectItem>
+                            <SelectItem value="branding">Identidad & Branding</SelectItem>
+                            <SelectItem value="contenido">Generación de Contenido</SelectItem>
+                            <SelectItem value="asesoramiento">Asesoramiento 1:1</SelectItem>
+                          </SelectGroup>
                           <SelectItem value="otros">Otros</SelectItem>
                         </SelectContent>
                       </Select>
@@ -162,38 +174,21 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="mt-10">
-                <button
-                  type="submit"
-                  className="bg-tertiary text-primary hover:bg-secondary focus-visible:outline-secondary block w-full cursor-pointer rounded-md px-3.5 py-2.5 text-center text-sm font-semibold shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2"
-                >
-                  Quiero que me contacten!
-                </button>
-              </div>
+              <Button className="mt-10 w-full" type="submit">
+                Quiero que me contacten!
+              </Button>
             </form>
           </Form>
 
           <div className="lg:mt-6 lg:w-80 lg:flex-none">
             <blockquote className="text-lg/8 font-semibold">
-              <p>
-                “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas
-                culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”
-              </p>
+              <p>En The Zeta Space convertimos tus ideas en experiencias que venden.</p>
+              <br />
+              <p>Agendá una reunión hoy mismo y descubrí cómo podemos hacer crecer tu marca.</p>
             </blockquote>
-            <figcaption className="mt-10 flex gap-x-6">
-              <img
-                alt=""
-                src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=96&h=96&q=80"
-                className="size-12 flex-none rounded-full bg-gray-50"
-              />
-              <div>
-                <div className="text-base font-semibold">Brenna Goyette</div>
-                <div className="text-tertiary text-sm/6">CEO of Workcation</div>
-              </div>
-            </figcaption>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
