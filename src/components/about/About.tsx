@@ -1,4 +1,4 @@
-import { MoveRight } from 'lucide-react';
+import { Rocket } from 'lucide-react';
 
 export function About() {
   return (
@@ -38,14 +38,14 @@ export function About() {
 
           <div className="mt-8 flex gap-4">
             <div className="border-tertiary/40 flex gap-4 border-r pr-4">
-              <MoveRight aria-hidden="true" className="mt-0.5 size-6 shrink-0" />
+              <Rocket aria-hidden="true" className="mt-0.5 size-6 shrink-0" />
               <p>
                 Diseñamos equipos a medida para cada proyecto, seleccionando a los mejores expertos
                 en cada área, que se ajusten a las necesidades específicas de tu negocio.{' '}
               </p>
             </div>
             <div className="flex gap-4">
-              <MoveRight aria-hidden="true" className="mt-0.5 size-6 shrink-0" />
+              <Rocket aria-hidden="true" className="mt-0.5 size-6 shrink-0" />
               <p>
                 Creemos en el poder del trabajo en equipo, en la constante búsqueda de resultados
                 concretos y en la capacidad de reinventarnos todos los días.

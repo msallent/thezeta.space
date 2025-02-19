@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { packs } from '@/constants/packs';
+import { cn } from '@/lib/utils';
 
 export function Packs() {
   return (
@@ -25,8 +25,11 @@ export function Packs() {
             Packs
           </p>
           <h2 className="mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl lg:text-balance">
-            Potenciá tu negocio
+            No es magia, es estrategia
           </h2>
+          <p className="text-tertiary font-secondary mt-4 text-lg/7">
+            Elegí el pack que se mejor adapte a tu marca.
+          </p>
         </div>
 
         <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">

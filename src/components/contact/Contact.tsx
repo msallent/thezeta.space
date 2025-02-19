@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -30,23 +31,48 @@ const formSchema = z.object({
   email: z.string().email('Email invalido').min(1, 'Email requerido'),
   phone: z.string(),
   service: z.string(),
-  comments: z.string(),
+  message: z.string(),
 });
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      comments: '',
-      email: '',
       name: '',
+      email: '',
       phone: '',
       service: '',
+      message: '',
     },
   });
 
   const onSubmit = (data: z.infer<typeof formSchema>) => {
-    console.log(data);
+    setIsSubmitting(true);
+
+    try {
+      window.grecaptcha.ready(() => {
+        window.grecaptcha
+          .execute(`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`, { action: 'submit' })
+          .then((token) => {
+            fetch(`https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID}`, {
+              method: 'POST',
+              body: JSON.stringify({
+                ...data,
+                'g-recaptcha-response': token,
+              }),
+              headers: {
+                'Content-Type': 'application/json',
+              },
+            });
+          });
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -137,19 +163,19 @@ export function Contact() {
                         <SelectContent>
                           <SelectGroup>
                             <SelectLabel>Packs</SelectLabel>
-                            <SelectItem value="launch-pack">Launch Pack</SelectItem>
-                            <SelectItem value="booster-pack">Booster Pack</SelectItem>
-                            <SelectItem value="premium-pack">Premium Pack</SelectItem>
+                            <SelectItem value="Launch Pack">Launch Pack</SelectItem>
+                            <SelectItem value="Booster Pack">Booster Pack</SelectItem>
+                            <SelectItem value="Premium Pack">Premium Pack</SelectItem>
                           </SelectGroup>
                           <SelectGroup>
                             <SelectLabel>Servicios</SelectLabel>
-                            <SelectItem value="social-media">Social Media & Paid Media</SelectItem>
-                            <SelectItem value="desarrollo-web">Diseño & Desarrollo Web</SelectItem>
-                            <SelectItem value="branding">Identidad & Branding</SelectItem>
-                            <SelectItem value="contenido">Generación de Contenido</SelectItem>
-                            <SelectItem value="asesoramiento">Asesoramiento 1:1</SelectItem>
+                            <SelectItem value="Social Media">Social Media & Paid Media</SelectItem>
+                            <SelectItem value="Desarrollo Web">Diseño & Desarrollo Web</SelectItem>
+                            <SelectItem value="Branding">Identidad & Branding</SelectItem>
+                            <SelectItem value="Contenido">Generación de Contenido</SelectItem>
+                            <SelectItem value="Asesoramiento">Asesoramiento 1:1</SelectItem>
                           </SelectGroup>
-                          <SelectItem value="otros">Otros</SelectItem>
+                          <SelectItem value="Otros">Otros</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -159,7 +185,7 @@ export function Contact() {
 
                 <div className="sm:col-span-2">
                   <FormField
-                    name="comments"
+                    name="message"
                     control={form.control}
                     render={({ field }) => (
                       <FormItem>
@@ -174,7 +200,7 @@ export function Contact() {
                 </div>
               </div>
 
-              <Button className="mt-10 w-full" type="submit">
+              <Button className="mt-10 w-full" type="submit" disabled={isSubmitting}>
                 Quiero que me contacten!
               </Button>
             </form>
