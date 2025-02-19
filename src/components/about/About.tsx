@@ -30,7 +30,7 @@ export function About() {
           </p>
         </div>
 
-        <div className="text-tertiary mx-auto mt-12 max-w-3xl font-[family-name:var(--font-glacial)] text-lg/7">
+        <div className="text-tertiary font-secondary mx-auto mt-12 max-w-3xl text-lg/7">
           <p className="text-center">
             Nuestra misión es llevar tu marca al siguiente nivel con soluciones innovadoras y
             personalizadas.

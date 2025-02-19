@@ -47,10 +47,7 @@ export function Packs() {
                 <p className="text-tertiary mt-4 text-sm/6">{pack.description}</p>
                 <ul role="list" className="text-tertiary mt-8 space-y-3">
                   {pack.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className="flex gap-x-3 font-[family-name:var(--font-glacial)]"
-                    >
+                    <li key={feature} className="font-secondary flex gap-x-3">
                       <CheckCircle2
                         aria-hidden="true"
                         className="h-6 w-5 flex-none text-indigo-600"

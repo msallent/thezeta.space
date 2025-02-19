@@ -27,7 +27,7 @@ export function Services() {
           <h2 className="mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl lg:text-balance">
             Potenciá tu negocio
           </h2>
-          <p className="text-tertiary mt-4 font-[family-name:var(--font-glacial)] text-lg/7">
+          <p className="text-tertiary font-secondary mt-4 text-lg/7">
             Cada servicio que ofrecemos es una pieza clave para hacer crecer tu negocio
             <br /> y que tu marca sea inolvidable.
           </p>
@@ -48,7 +48,7 @@ export function Services() {
                     </dt>
                     <dd className="text-tertiary mt-4 flex flex-col text-lg/7">
                       {description.map((description, index) => (
-                        <p key={index} className="flex-auto font-[family-name:var(--font-glacial)]">
+                        <p key={index} className="font-secondary flex-auto">
                           {description}
                         </p>
                       ))}

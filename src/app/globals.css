@@ -7,6 +7,8 @@
   --color-secondary: var(--secondary);
   --color-tertiary: var(--tertiary);
   --color-destructive: var(--destructive);
+  --font-primary: var(--font-nourd), var(--font-sans);
+  --font-secondary: var(--font-glacial), var(--font-serif);
 }
 :root {
   --primary: hsl(0 0% 9%);
@@ -18,5 +20,4 @@
 body {
   color: var(--color-white);
   background: var(--color-primary);
-  font-family: var(--font-nourd), sans-serif;
 }
