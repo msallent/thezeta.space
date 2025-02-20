@@ -24,20 +24,22 @@ export function Packs() {
           <p id="packs" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
             Packs
           </p>
+
           <h2 className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
             No es magia, es estrategia
           </h2>
+
           <p className="text-tertiary font-secondary mt-4 text-lg/7">
             Elegí el pack que mejor se adapte a tu marca!
           </p>
         </div>
 
-        <div className="isolate mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="isolate mx-auto mt-12 grid grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {packs.map((pack, index) => (
             <div
               key={index}
               className={cn(
-                'bg-primary flex flex-col justify-between rounded-3xl p-8 ring-1 ring-gray-200 xl:p-10',
+                'flex flex-col justify-between rounded-3xl p-8 ring-1 ring-gray-200 xl:p-10',
                 index === 0 && 'lg:rounded-r-none',
                 index === packs.length - 1 && 'lg:rounded-l-none',
                 index === 1 ? 'lg:z-10 lg:rounded-b-none' : 'lg:mt-8',
@@ -45,9 +47,11 @@ export function Packs() {
             >
               <div>
                 <div className="flex items-center justify-between gap-x-4">
-                  <h3 className="text-secondary text-lg/8 font-semibold">{pack.name}</h3>
+                  <h3 className="text-secondary text-lg/7 font-semibold">{pack.name}</h3>
                 </div>
+
                 <p className="text-tertiary mt-4 text-sm/6">{pack.description}</p>
+
                 <ul role="list" className="text-tertiary mt-8 space-y-3">
                   {pack.features.map((feature) => (
                     <li key={feature} className="font-secondary flex gap-x-3">
@@ -60,6 +64,7 @@ export function Packs() {
                   ))}
                 </ul>
               </div>
+
               <Button asChild>
                 <a href="#contacto" className="mt-8">
                   Cotizar

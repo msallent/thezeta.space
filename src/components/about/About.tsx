@@ -21,10 +21,12 @@ export function About() {
           <p id="nosotros" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
             Nosotros
           </p>
+
           <h2 className="mt-2 text-4xl font-semibold tracking-tight text-balance lg:text-7xl">
             Bienvenidos a The Zeta Space
           </h2>
-          <p className="text-tertiary mt-6 text-lg font-medium text-pretty sm:text-xl/8">
+
+          <p className="text-tertiary mt-6 text-lg/7 font-medium text-balance sm:text-xl/8">
             Donde la creatividad de la Generación Z se convierte en estrategias digitales que
             realmente funcionan.
           </p>
@@ -37,15 +39,18 @@ export function About() {
           </p>
 
           <div className="mt-8 flex flex-col gap-8 lg:flex-row lg:gap-4">
-            <div className="lg:border-tertiary/40 flex gap-4 pr-4 lg:border-r">
+            <div className="lg:border-tertiary/40 flex gap-4 lg:border-r lg:pr-4">
               <Rocket aria-hidden="true" className="text-secondary mt-0.5 size-6 shrink-0" />
+
               <p>
                 Diseñamos equipos a medida para cada proyecto, seleccionando a los mejores expertos
-                en cada área, que se ajusten a las necesidades específicas de tu negocio.{' '}
+                en cada área, que se ajusten a las necesidades específicas de tu negocio.
               </p>
             </div>
+
             <div className="flex gap-4">
               <Sparkle aria-hidden="true" className="text-secondary mt-0.5 size-6 shrink-0" />
+
               <p>
                 Creemos en el poder del trabajo en equipo, en la constante búsqueda de resultados
                 concretos y en la capacidad de reinventarnos todos los días.

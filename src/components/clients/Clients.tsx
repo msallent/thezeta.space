@@ -1,9 +1,4 @@
-'use client';
-
-import Image from 'next/image';
-import AutoScroll from 'embla-carousel-auto-scroll';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
-import { clients } from '@/constants/clients';
+import { ClientsCarousel } from './Carousel';
 
 export function Clients() {
   return (
@@ -13,23 +8,7 @@ export function Clients() {
           Clientes que confían en nosotros
         </h2>
 
-        <Carousel
-          className="mt-12"
-          opts={{ watchDrag: false }}
-          plugins={[AutoScroll({ speed: 1 })]}
-        >
-          <CarouselContent className="-ml-16 items-center">
-            {clients.map(({ name, logo }) => (
-              <CarouselItem key={name} className="flex h-16 max-w-48 basis-auto items-center pl-16">
-                <Image
-                  alt={name}
-                  src={logo}
-                  className="max-h-16 w-auto object-contain brightness-0 invert"
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+        <ClientsCarousel />
       </div>
     </section>
   );

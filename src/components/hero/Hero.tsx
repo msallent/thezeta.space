@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 
 export function Hero() {
   return (
-    <section className="relative isolate px-6 pt-14 lg:px-8">
+    <section className="relative px-6 pt-14 lg:px-8">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -16,13 +16,11 @@ export function Hero() {
         />
       </div>
 
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div className="mx-auto max-w-2xl pt-36 pb-32 sm:py-48 lg:py-56">
         <div className="flex flex-col gap-8 text-center">
-          <h1 className="text-5xl font-semibold tracking-tight text-balance sm:text-7xl">
-            The Zeta Space
-          </h1>
+          <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">The Zeta Space</h1>
 
-          <div className="text-tertiary text-lg font-medium text-pretty sm:text-xl/8">
+          <div className="text-tertiary text-lg/7 font-medium text-pretty sm:text-xl/8">
             <p>Crecé, destacate, rompela</p>
             <p>Impulsamos marcas con creatividad y resultados</p>
           </div>
