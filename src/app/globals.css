@@ -11,8 +11,8 @@
   --font-secondary: var(--font-glacial), var(--font-serif);
 }
 :root {
-  --primary: hsl(0 0% 9%);
-  --secondary: hsl(0 0% 96.1%);
+  --primary: #040054;
+  --secondary: #9a9dd9;
   --tertiary: #d3dcde;
   --destructive: hsl(0 84.2% 60.2%);
 }
@@ -20,4 +20,8 @@
 body {
   color: var(--color-white);
   background: var(--color-primary);
+}
+
+.grecaptcha-badge {
+  visibility: hidden !important;
 }
