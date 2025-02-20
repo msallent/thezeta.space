@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
 import { z } from 'zod';
 
 import {
@@ -71,7 +72,11 @@ export function Contact() {
     } catch (error) {
       console.error(error);
     } finally {
+      form.reset();
       setIsSubmitting(false);
+      toast.success('Mensaje enviado!', {
+        description: 'Nos contactaremos a la brevedad.',
+      });
     }
   };
 
@@ -151,10 +156,10 @@ export function Contact() {
                 <FormField
                   name="service"
                   control={form.control}
-                  render={({ field: { onChange, value, ...rest } }) => (
+                  render={({ field: { onChange, ...rest } }) => (
                     <FormItem>
                       <FormLabel>Pack / Servicio</FormLabel>
-                      <Select onValueChange={onChange} defaultValue={value} {...rest}>
+                      <Select onValueChange={onChange} {...rest}>
                         <FormControl>
                           <SelectTrigger>
                             <SelectValue />
