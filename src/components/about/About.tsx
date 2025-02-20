@@ -17,11 +17,11 @@ export function About() {
       </div>
 
       <div className="px-6 py-24 sm:py-32 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <p id="nosotros" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
             Nosotros
           </p>
-          <h2 className="mt-2 text-7xl font-semibold tracking-tight text-pretty lg:text-balance">
+          <h2 className="mt-2 text-4xl font-semibold tracking-tight text-balance lg:text-7xl">
             Bienvenidos a The Zeta Space
           </h2>
           <p className="text-tertiary mt-6 text-lg font-medium text-pretty sm:text-xl/8">
@@ -36,8 +36,8 @@ export function About() {
             personalizadas.
           </p>
 
-          <div className="mt-8 flex gap-4">
-            <div className="border-tertiary/40 flex gap-4 border-r pr-4">
+          <div className="mt-8 flex flex-col gap-8 lg:flex-row lg:gap-4">
+            <div className="lg:border-tertiary/40 flex gap-4 pr-4 lg:border-r">
               <Rocket aria-hidden="true" className="text-secondary mt-0.5 size-6 shrink-0" />
               <p>
                 Diseñamos equipos a medida para cada proyecto, seleccionando a los mejores expertos

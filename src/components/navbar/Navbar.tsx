@@ -5,8 +5,8 @@ import { navbarLinks } from '@/constants/navbar';
 export function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      <nav className="flex items-start justify-between p-6 lg:px-8">
-        <Image alt="The Zeta Space" src={logo} className="h-24 w-auto" />
+      <nav className="flex items-center justify-between p-6 md:items-start lg:px-8">
+        <Image alt="The Zeta Space" src={logo} className="h-16 w-auto md:h-24" />
 
         <div className="hidden lg:mt-4 lg:flex lg:gap-x-12">
           {navbarLinks.map(({ title, href }) => (

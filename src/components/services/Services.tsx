@@ -20,7 +20,7 @@ export function Services() {
   return (
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <p id="servicios" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
             Servicios
           </p>
@@ -40,7 +40,7 @@ export function Services() {
           >
             <CarouselContent>
               {services.map(({ Icon, description, title }) => (
-                <CarouselItem key={title} className="basis-1/3">
+                <CarouselItem key={title} className="basis-full md:basis-1/3">
                   <div className="flex flex-col">
                     <dt className="flex items-center gap-x-3 text-base/7 font-semibold">
                       <Icon aria-hidden="true" className="text-secondary size-6 flex-none" />
@@ -64,7 +64,7 @@ export function Services() {
               ))}
             </CarouselContent>
 
-            <div className="mt-4 flex items-center justify-center gap-8">
+            <div className="mt-4 hidden items-center justify-center gap-8 lg:flex">
               <CarouselPrevious />
               <CarouselNext />
             </div>

@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export function Packs() {
   return (
-    <div className="relative isolate px-6 py-24 sm:py-32 lg:px-8">
+    <div className="relative isolate py-24 sm:py-32">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
@@ -20,15 +20,15 @@ export function Packs() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
+        <div className="mx-auto max-w-2xl text-center">
           <p id="packs" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
             Packs
           </p>
-          <h2 className="mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl lg:text-balance">
+          <h2 className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
             No es magia, es estrategia
           </h2>
           <p className="text-tertiary font-secondary mt-4 text-lg/7">
-            Elegí el pack que se mejor adapte a tu marca.
+            Elegí el pack que mejor se adapte a tu marca!
           </p>
         </div>
 
