@@ -54,7 +54,7 @@ export function Services() {
                       ))}
 
                       <p className="mt-6">
-                        <a href="#contacto" className="text-secondary text-sm/6 font-semibold">
+                        <a href="#contacto" className="text-sm/6 font-semibold text-white">
                           Más info <span aria-hidden="true">→</span>
                         </a>
                       </p>

@@ -1,4 +1,4 @@
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { packs } from '@/constants/packs';
 import { cn } from '@/lib/utils';
@@ -51,9 +51,9 @@ export function Packs() {
                 <ul role="list" className="text-tertiary mt-8 space-y-3">
                   {pack.features.map((feature) => (
                     <li key={feature} className="font-secondary flex gap-x-3">
-                      <CheckCircle2
+                      <CheckCircle
                         aria-hidden="true"
-                        className="h-6 w-5 flex-none text-indigo-600"
+                        className="text-secondary h-6 w-5 flex-none"
                       />
                       {feature}
                     </li>
@@ -62,7 +62,7 @@ export function Packs() {
               </div>
               <Button asChild>
                 <a href="#contacto" className="mt-8">
-                  Más info
+                  Cotizar
                 </a>
               </Button>
             </div>
