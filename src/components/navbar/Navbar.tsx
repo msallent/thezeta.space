@@ -21,7 +21,9 @@ export function Navbar() {
           ))}
         </div>
 
-        <Menu />
+        <div className="md:hidden">
+          <Menu />
+        </div>
       </nav>
     </header>
   );
