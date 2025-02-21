@@ -25,7 +25,7 @@ export function ServicesCarousel() {
     >
       <CarouselContent>
         {services.map(({ Icon, description, title }) => (
-          <CarouselItem key={title} className="flex basis-full flex-col md:basis-1/3">
+          <CarouselItem key={title} className="flex basis-full flex-col md:basis-1/2 lg:basis-1/3">
             <p className="flex items-center gap-x-3 text-base/7 font-semibold">
               <Icon aria-hidden="true" className="text-secondary size-6 flex-none" />
               {title}

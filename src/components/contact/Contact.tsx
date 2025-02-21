@@ -2,7 +2,7 @@ import { ContactForm } from './Form';
 
 export function Contact() {
   return (
-    <section className="relative isolate px-6 py-24 sm:py-32 lg:px-8">
+    <section className="relative isolate px-6 py-24 sm:py-32 md:px-8">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-20 -z-10 transform-gpu overflow-hidden blur-3xl"

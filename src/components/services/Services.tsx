@@ -3,7 +3,7 @@ import { ServicesCarousel } from './Carousel';
 export function Services() {
   return (
     <section className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p id="servicios" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
             Servicios

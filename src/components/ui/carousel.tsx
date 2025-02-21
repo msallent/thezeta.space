@@ -51,6 +51,7 @@ function Carousel({
 }: React.ComponentProps<'div'> & CarouselProps) {
   const [carouselRef, api] = useEmblaCarousel(
     {
+      align: 'start',
       loop: true,
       ...opts,
       axis: orientation === 'horizontal' ? 'x' : 'y',

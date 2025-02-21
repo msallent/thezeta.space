@@ -19,7 +19,7 @@ export function Packs() {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-6 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p id="packs" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
             Packs
@@ -39,9 +39,9 @@ export function Packs() {
             <div
               key={index}
               className={cn(
-                'flex flex-col justify-between rounded-3xl p-8 ring-1 ring-gray-200 xl:p-10',
-                index === 0 && 'lg:rounded-r-none',
-                index === packs.length - 1 && 'lg:rounded-l-none',
+                'border-tertiary flex flex-col justify-between rounded-3xl border p-8 xl:p-10',
+                index === 0 && 'lg:rounded-r-none lg:border-r-0',
+                index === packs.length - 1 && 'lg:rounded-l-none lg:border-l-0',
                 index === 1 ? 'lg:z-10 lg:rounded-b-none' : 'lg:mt-8',
               )}
             >

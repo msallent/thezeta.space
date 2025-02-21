@@ -6,7 +6,7 @@ import { navbarLinks } from '@/constants/navbar';
 export function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      <nav className="flex items-center justify-between p-6 md:items-start lg:px-8">
+      <nav className="flex items-center justify-between p-6 md:px-8 lg:items-start">
         <Image alt="The Zeta Space" src={logo} className="h-16 w-auto md:h-24" />
 
         <div className="hidden lg:mt-4 lg:flex lg:gap-x-12">
@@ -21,7 +21,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Menu />
         </div>
       </nav>

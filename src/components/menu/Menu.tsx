@@ -30,7 +30,7 @@ export function Menu() {
   return (
     <Drawer open={isOpen} onOpenChange={setIsOpen} direction="top">
       <DrawerTrigger>
-        <MenuIcon className="size-8 lg:hidden" />
+        <MenuIcon className="size-8 md:size-10 lg:hidden" />
       </DrawerTrigger>
 
       <DrawerContent>
@@ -41,14 +41,17 @@ export function Menu() {
           <div className="flex items-center gap-8">
             <Image alt="The Zeta Space" src={logo} className="h-26 w-auto" />
 
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 md:flex-row md:gap-8">
               {navbarLinks.map(({ title, href }) => (
                 <li
                   key={title}
                   onClick={() => onLinkClick(href)}
                   className="text-tertiary text-lg/7 font-semibold"
                 >
-                  <span aria-hidden="true">→</span> {title}
+                  <span className="md:hidden" aria-hidden="true">
+                    →
+                  </span>{' '}
+                  {title}
                 </li>
               ))}
             </ul>

@@ -16,7 +16,7 @@ export function About() {
         />
       </div>
 
-      <div className="px-6 py-24 sm:py-32 lg:px-8">
+      <div className="px-6 py-24 sm:py-32 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p id="nosotros" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
             Nosotros
@@ -38,8 +38,8 @@ export function About() {
             personalizadas.
           </p>
 
-          <div className="mt-8 flex flex-col gap-8 lg:flex-row lg:gap-4">
-            <div className="lg:border-tertiary/40 flex gap-4 lg:border-r lg:pr-4">
+          <div className="mt-8 flex flex-col gap-8 md:flex-row md:gap-4">
+            <div className="md:border-tertiary/40 flex gap-4 md:border-r md:pr-4">
               <Rocket aria-hidden="true" className="text-secondary mt-0.5 size-6 shrink-0" />
 
               <p>
