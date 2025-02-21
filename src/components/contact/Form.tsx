@@ -69,6 +69,7 @@ export function ContactForm() {
             });
 
             form.reset();
+            setIsSubmitting(false);
             toast.success('Mensaje enviado!', {
               description: 'Nos contactaremos a la brevedad.',
             });
@@ -76,11 +77,10 @@ export function ContactForm() {
       });
     } catch (error) {
       console.error(error);
+      setIsSubmitting(false);
       toast.error('Algo salió mal', {
         description: 'Por favor, intentá de nuevo.',
       });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
