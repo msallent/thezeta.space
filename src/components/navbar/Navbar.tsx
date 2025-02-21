@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { Menu } from 'lucide-react';
 import logo from '@/assets/images/logo.png';
+import { Menu } from '@/components';
 import { navbarLinks } from '@/constants/navbar';
 
 export function Navbar() {
@@ -21,7 +21,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <Menu className="size-8 lg:hidden" />
+        <Menu />
       </nav>
     </header>
   );
