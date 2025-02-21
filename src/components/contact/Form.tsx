@@ -61,6 +61,7 @@ export function ContactForm() {
               method: 'POST',
               body: JSON.stringify({
                 ...data,
+                subject: 'Cliente potencial form web',
                 'g-recaptcha-response': token,
               }),
               headers: {
