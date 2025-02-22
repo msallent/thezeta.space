@@ -24,7 +24,7 @@ export function Contact() {
           Impulsamos marcas con creatividad y resultados
         </h2>
 
-        <p className="text-tertiary font-secondary mt-2 text-lg/7">
+        <p className="text-tertiary font-secondary mt-2 text-balance text-lg/7">
           Listo para empezar? Completá el formulario y te contactamos.
         </p>
 
