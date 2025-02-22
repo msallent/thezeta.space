@@ -39,7 +39,7 @@ export function Menu() {
           <DrawerDescription className="hidden" />
 
           <div className="flex items-center gap-8">
-            <Image alt="The Zeta Space" src={logo} className="h-26 w-auto" />
+            <Image alt="The Zeta Space" src={logo} className="h-28 w-auto" />
 
             <ul className="flex flex-col gap-2 md:flex-row md:gap-8">
               {navbarLinks.map(({ title, href }) => (

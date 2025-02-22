@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary: #040054;
-  --secondary: #9a9dd9;
-  --tertiary: #d3dcde;
-  --destructive: hsl(0 84.2% 60.2%);
-}
+@layer base {
+  :root {
+    --primary: rgb(4, 0, 84);
+    --primary-muted: rgba(4, 0, 84, 0.5);
+    --secondary: rgb(154, 157, 217);
+    --secondary-muted: rgba(154, 157, 217, 0.5);
+    --tertiary: rgb(211, 220, 222);
+    --tertiary-muted: rgba(211, 220, 222, 0.5);
+    --destructive: rgb(239, 68, 68);
+    --destructive-muted: rgba(239, 68, 68, 0.5);
+  }
 
-body {
-  color: theme('colors.white');
-  background: var(--primary);
+  body {
+    color: theme('colors.white');
+    background: var(--primary);
+  }
 }
 
 .grecaptcha-badge {

@@ -39,7 +39,7 @@ export function About() {
           </p>
 
           <div className="mt-8 flex flex-col gap-8 md:flex-row md:gap-4">
-            <div className="md:border-tertiary/40 flex gap-4 md:border-r md:pr-4">
+            <div className="md:border-tertiary-muted flex gap-4 md:border-r md:pr-4">
               <Rocket aria-hidden="true" className="text-secondary mt-0.5 size-6 shrink-0" />
 
               <p>

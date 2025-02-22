@@ -132,17 +132,10 @@ function Carousel({
 }
 
 function CarouselContent({ className, ...props }: React.ComponentProps<'div'>) {
-  const { carouselRef, opts, orientation } = useCarousel();
+  const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div
-      ref={carouselRef}
-      className={cn(
-        'cursor-grab overflow-hidden active:cursor-grabbing',
-        opts && !opts.watchDrag && 'cursor-default active:cursor-default',
-      )}
-      data-slot="carousel-content"
-    >
+    <div ref={carouselRef} className="cursor-grab overflow-hidden active:cursor-grabbing">
       <div
         className={cn('flex', orientation === 'horizontal' ? '-ml-8' : '-mt-8 flex-col', className)}
         {...props}
@@ -158,7 +151,6 @@ function CarouselItem({ className, ...props }: React.ComponentProps<'div'>) {
     <div
       role="group"
       aria-roledescription="slide"
-      data-slot="carousel-item"
       className={cn(
         'min-w-0 shrink-0 grow-0 basis-full select-none',
         orientation === 'horizontal' ? 'pl-8' : 'pt-8',
@@ -179,7 +171,6 @@ function CarouselPrevious({
 
   return (
     <Button
-      data-slot="carousel-previous"
       variant={variant}
       size={size}
       className={cn('size-8 rounded-full', className)}
@@ -188,7 +179,7 @@ function CarouselPrevious({
       {...props}
     >
       <ArrowLeft />
-      <span className="sr-only">Previous slide</span>
+      <span className="sr-only">Elemento anterior</span>
     </Button>
   );
 }
@@ -203,7 +194,6 @@ function CarouselNext({
 
   return (
     <Button
-      data-slot="carousel-next"
       variant={variant}
       size={size}
       className={cn('size-8 rounded-full', className)}
@@ -212,7 +202,7 @@ function CarouselNext({
       {...props}
     >
       <ArrowRight />
-      <span className="sr-only">Next slide</span>
+      <span className="sr-only">Elemento siguiente</span>
     </Button>
   );
 }
