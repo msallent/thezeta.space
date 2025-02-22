@@ -24,7 +24,11 @@ export function Footer() {
     <footer className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
       <div className="flex justify-center gap-x-10">
         {social.map((item) => (
-          <a key={item.name} href={item.href} className="text-tertiary hover:text-secondary">
+          <a
+            key={item.name}
+            href={item.href}
+            className="text-tertiary hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
+          >
             <span className="sr-only">{item.name}</span>
             <item.Icon aria-hidden="true" className="size-6" />
           </a>

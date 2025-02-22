@@ -34,7 +34,10 @@ export function ServicesCarousel() {
             <div className="mt-4 flex flex-col text-lg/7 text-tertiary">
               <p className="font-secondary">{description}</p>
 
-              <a href="#contacto" className="mt-6 w-fit text-sm/6 font-semibold text-white">
+              <a
+                href="#contacto"
+                className="mt-6 w-fit text-sm/6 font-semibold text-white hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
+              >
                 Más info <span aria-hidden="true">→</span>
               </a>
             </div>
