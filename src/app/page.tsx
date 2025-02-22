@@ -1,9 +1,20 @@
-import { About, Clients, Contact, Footer, Hero, Navbar, Packs, Services } from '@/components';
+import {
+  About,
+  Clients,
+  Contact,
+  Footer,
+  Hero,
+  Navbar,
+  Packs,
+  Services,
+  WhatsApp,
+} from '@/components';
 
 export default function Home() {
   return (
-    <>
+    <div className="relative">
       <Navbar />
+
       <main>
         <Hero />
         <Services />
@@ -12,7 +23,9 @@ export default function Home() {
         <Clients />
         <Contact />
       </main>
+
       <Footer />
-    </>
+      <WhatsApp />
+    </div>
   );
 }

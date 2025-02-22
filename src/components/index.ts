@@ -7,3 +7,4 @@ export * from './menu/Menu';
 export * from './navbar/Navbar';
 export * from './packs/Packs';
 export * from './services/Services';
+export * from './whatsapp/WhatsApp';
