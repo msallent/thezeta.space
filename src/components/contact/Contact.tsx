@@ -12,14 +12,14 @@ export function Contact() {
             clipPath:
               'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85% 91%, 64% 86%, 72% 11%, 60.2% 62.4%, 43% 69%, 47% 38%, 45.2% 34.5%, 27% 62%, 3% 13%, 31% 25%, 32% 85%, 51% 34%, 74.1% 44.1%)',
           }}
-          className="to-secondary relative left-[calc(50%+3rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] opacity-70 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] lg:opacity-40"
+          className="to-secondary relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] opacity-70 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem] lg:opacity-40"
         />
       </div>
 
       <div className="mx-auto max-w-xl lg:max-w-4xl">
         <h2
           id="contacto"
-          className="-mt-10 pt-10 text-4xl font-semibold tracking-tight text-balance sm:text-5xl"
+          className="-mt-10 text-balance pt-10 text-4xl font-semibold tracking-tight sm:text-5xl"
         >
           Impulsamos marcas con creatividad y resultados
         </h2>

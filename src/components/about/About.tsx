@@ -12,7 +12,7 @@ export function About() {
             clipPath:
               'polygon(74.1% 44.1%, 100% 61.6%, 83% 94%, 93% 88%, 80% 93%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 5% 75%, 17.9% 100%, 27.6% 76.8%, 42% 97%, 74.1% 44.1%)',
           }}
-          className="to-secondary relative left-[calc(50%-11rem)] aspect-1155/678 w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-linear-to-tr from-[#ff80b5] opacity-70 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] lg:opacity-40"
+          className="to-secondary relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] opacity-70 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem] lg:opacity-40"
         />
       </div>
 
@@ -22,11 +22,11 @@ export function About() {
             Nosotros
           </p>
 
-          <h2 className="mt-2 text-4xl font-semibold tracking-tight text-balance lg:text-7xl">
+          <h2 className="mt-2 text-balance text-4xl font-semibold tracking-tight lg:text-7xl">
             Bienvenidos a The Zeta Space
           </h2>
 
-          <p className="text-tertiary mt-6 text-lg/7 font-medium text-balance sm:text-xl/8">
+          <p className="text-tertiary mt-6 text-balance text-lg/7 font-medium sm:text-xl/8">
             Donde la creatividad de la Generación Z se convierte en estrategias digitales que
             realmente funcionan.
           </p>
