@@ -46,7 +46,7 @@ export function Menu() {
                 <li
                   key={title}
                   onClick={() => onLinkClick(href)}
-                  className="text-tertiary text-lg/7 font-semibold"
+                  className="text-lg/7 font-semibold text-tertiary"
                 >
                   <span className="md:hidden" aria-hidden="true">
                     →

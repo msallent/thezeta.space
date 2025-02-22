@@ -111,7 +111,7 @@ function FormDescription({ className, ...props }: React.ComponentProps<'p'>) {
   return (
     <p
       id={formDescriptionId}
-      className={cn('text-secondary text-sm text-opacity-50', className)}
+      className={cn('text-sm text-secondary text-opacity-50', className)}
       {...props}
     />
   );
@@ -128,7 +128,7 @@ function FormMessage({ className, ...props }: React.ComponentProps<'p'>) {
   return (
     <p
       id={formMessageId}
-      className={cn('text-destructive text-sm font-medium', className)}
+      className={cn('text-sm font-medium text-destructive', className)}
       {...props}
     >
       {body}

@@ -5,15 +5,15 @@ export function Services() {
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p id="servicios" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
+          <p id="servicios" className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary">
             Servicios
           </p>
 
-          <h2 className="mt-2 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+          <h2 className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
             Potenciá tu negocio
           </h2>
 
-          <p className="text-tertiary font-secondary mt-4 text-lg/7">
+          <p className="mt-4 font-secondary text-lg/7 text-tertiary">
             Cada servicio que ofrecemos es una pieza clave para hacer crecer tu negocio
             <br /> y que tu marca sea inolvidable.
           </p>

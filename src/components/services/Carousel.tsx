@@ -27,11 +27,11 @@ export function ServicesCarousel() {
         {services.map(({ Icon, description, title }) => (
           <CarouselItem key={title} className="flex basis-full flex-col md:basis-1/2 lg:basis-1/3">
             <p className="flex items-center gap-x-3 text-base/7 font-semibold">
-              <Icon aria-hidden="true" className="text-secondary size-6 flex-none" />
+              <Icon aria-hidden="true" className="size-6 flex-none text-secondary" />
               {title}
             </p>
 
-            <div className="text-tertiary mt-4 flex flex-col text-lg/7">
+            <div className="mt-4 flex flex-col text-lg/7 text-tertiary">
               <p className="font-secondary">{description}</p>
 
               <a href="#contacto" className="mt-6 w-fit text-sm/6 font-semibold text-white">

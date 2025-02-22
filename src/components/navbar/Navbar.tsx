@@ -14,7 +14,7 @@ export function Navbar() {
             <a
               key={title}
               href={href}
-              className="hover:text-secondary focus-visible:outline-secondary rounded-md text-sm/6 font-semibold focus-visible:outline-2 focus-visible:outline-offset-2"
+              className="rounded-md text-sm/6 font-semibold hover:text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary"
             >
               {title}
             </a>

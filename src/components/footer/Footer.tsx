@@ -31,7 +31,7 @@ export function Footer() {
         ))}
       </div>
 
-      <p className="text-tertiary mt-10 text-center text-sm/6">&copy; 2025 The Zeta Space</p>
+      <p className="mt-10 text-center text-sm/6 text-tertiary">&copy; 2025 The Zeta Space</p>
     </footer>
   );
 }

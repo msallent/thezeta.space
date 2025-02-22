@@ -21,7 +21,7 @@ export function Packs() {
 
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p id="packs" className="text-secondary -mt-10 pt-10 text-lg/7 font-semibold">
+          <p id="packs" className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary">
             Packs
           </p>
 
@@ -29,7 +29,7 @@ export function Packs() {
             No es magia, es estrategia
           </h2>
 
-          <p className="text-tertiary font-secondary mt-4 text-lg/7">
+          <p className="mt-4 font-secondary text-lg/7 text-tertiary">
             Elegí el pack que mejor se adapte a tu marca!
           </p>
         </div>
@@ -39,7 +39,7 @@ export function Packs() {
             <div
               key={index}
               className={cn(
-                'border-tertiary flex flex-col justify-between rounded-3xl border p-8 xl:p-10',
+                'flex flex-col justify-between rounded-3xl border border-tertiary p-8 xl:p-10',
                 index === 0 && 'lg:rounded-r-none lg:border-r-0',
                 index === packs.length - 1 && 'lg:rounded-l-none lg:border-l-0',
                 index === 1 ? 'lg:z-10 lg:rounded-b-none' : 'lg:mt-8',
@@ -47,17 +47,17 @@ export function Packs() {
             >
               <div>
                 <div className="flex items-center justify-between gap-x-4">
-                  <h3 className="text-secondary text-lg/7 font-semibold">{pack.name}</h3>
+                  <h3 className="text-lg/7 font-semibold text-secondary">{pack.name}</h3>
                 </div>
 
-                <p className="text-tertiary mt-4 text-sm/6">{pack.description}</p>
+                <p className="mt-4 text-sm/6 text-tertiary">{pack.description}</p>
 
-                <ul role="list" className="text-tertiary mt-8 space-y-3">
+                <ul role="list" className="mt-8 space-y-3 text-tertiary">
                   {pack.features.map((feature) => (
-                    <li key={feature} className="font-secondary flex gap-x-3">
+                    <li key={feature} className="flex gap-x-3 font-secondary">
                       <CheckCircle
                         aria-hidden="true"
-                        className="text-secondary h-6 w-5 flex-none"
+                        className="h-6 w-5 flex-none text-secondary"
                       />
                       {feature}
                     </li>
