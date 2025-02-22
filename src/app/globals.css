@@ -1,15 +1,7 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@plugin 'tailwindcss-animate';
-
-@theme inline {
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-tertiary: var(--tertiary);
-  --color-destructive: var(--destructive);
-  --font-primary: var(--font-nourd), var(--font-sans);
-  --font-secondary: var(--font-glacial), var(--font-serif);
-}
 :root {
   --primary: #040054;
   --secondary: #9a9dd9;
@@ -18,8 +10,8 @@
 }
 
 body {
-  color: var(--color-white);
-  background: var(--color-primary);
+  color: theme('colors.white');
+  background: var(--primary);
 }
 
 .grecaptcha-badge {
