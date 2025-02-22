@@ -29,7 +29,7 @@ export function Packs() {
             No es magia, es estrategia
           </h2>
 
-          <p className="mt-4 font-secondary text-lg/7 text-tertiary">
+          <p className="mx-auto mt-4 w-[16.75rem] font-secondary text-lg/7 text-tertiary md:w-auto">
             Elegí el pack que mejor se adapte a tu marca!
           </p>
         </div>
