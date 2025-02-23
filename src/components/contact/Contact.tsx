@@ -1,21 +1,8 @@
-import { m, type Variants } from 'motion/react';
+import { m } from 'motion/react';
+
+import { child, stagger } from '@/constants/variants';
 
 import { ContactForm } from './Form';
-
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.05,
-    },
-  },
-};
-
-const childVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
 
 export function Contact() {
   return (
@@ -35,21 +22,21 @@ export function Contact() {
 
       <div className="mx-auto max-w-xl lg:max-w-4xl">
         <m.div
+          variants={stagger}
           initial="hidden"
           whileInView="visible"
-          variants={containerVariants}
           viewport={{ amount: 0.8, once: true }}
         >
           <m.h2
             id="contacto"
-            variants={childVariants}
+            variants={child}
             className="-mt-10 text-balance pt-10 text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             Impulsamos marcas con creatividad y resultados
           </m.h2>
 
           <m.p
-            variants={childVariants}
+            variants={child}
             className="mt-2 text-balance font-secondary text-lg/7 text-tertiary"
           >
             Listo para empezar? Completá el formulario y te contactamos.
@@ -60,17 +47,17 @@ export function Contact() {
           <ContactForm />
 
           <m.div
+            variants={stagger}
             initial="hidden"
             whileInView="visible"
-            variants={containerVariants}
             viewport={{ amount: 0.8, once: true }}
             className="flex flex-col gap-7 text-center text-lg/7 font-semibold lg:mt-6 lg:w-80 lg:flex-none lg:text-left"
           >
-            <m.p variants={childVariants}>
+            <m.p variants={child}>
               En The Zeta Space convertimos tus ideas en experiencias que venden.
             </m.p>
 
-            <m.p variants={childVariants}>
+            <m.p variants={child}>
               Agendá una reunión hoy mismo y descubrí cómo podemos hacer crecer tu marca.
             </m.p>
           </m.div>

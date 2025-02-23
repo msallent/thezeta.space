@@ -1,20 +1,7 @@
-import { m, type Variants } from 'motion/react';
+import { m } from 'motion/react';
 import { Rocket, Sparkle } from 'lucide-react';
 
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.05,
-    },
-  },
-};
-
-const childVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
+import { child, stagger } from '@/constants/variants';
 
 export function About() {
   return (
@@ -34,29 +21,29 @@ export function About() {
 
       <div className="px-6 py-24 sm:py-32 md:px-8">
         <m.div
+          variants={stagger}
           initial="hidden"
           whileInView="visible"
-          variants={containerVariants}
           viewport={{ amount: 0.8, once: true }}
           className="mx-auto max-w-2xl text-center"
         >
           <m.p
             id="nosotros"
-            variants={childVariants}
+            variants={child}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
           >
             Nosotros
           </m.p>
 
           <m.h2
-            variants={childVariants}
+            variants={child}
             className="mt-2 text-balance text-4xl font-semibold tracking-tight lg:text-7xl"
           >
             Bienvenidos a The Zeta Space
           </m.h2>
 
           <m.p
-            variants={childVariants}
+            variants={child}
             className="mt-6 text-balance text-lg/7 font-medium text-tertiary sm:text-xl/8"
           >
             Donde la creatividad de la Generación Z se convierte en estrategias digitales que
@@ -65,18 +52,18 @@ export function About() {
         </m.div>
 
         <m.div
+          variants={stagger}
           initial="hidden"
           whileInView="visible"
-          variants={containerVariants}
           viewport={{ amount: 0.8, once: true }}
           className="mx-auto mt-12 max-w-3xl font-secondary text-lg/7 text-tertiary"
         >
-          <m.p variants={childVariants} className="text-center">
+          <m.p variants={child} className="text-center">
             Nuestra misión es llevar tu marca al siguiente nivel con soluciones innovadoras y
             personalizadas.
           </m.p>
 
-          <m.div variants={childVariants} className="mt-8 flex flex-col gap-8 md:flex-row md:gap-4">
+          <m.div variants={child} className="mt-8 flex flex-col gap-8 md:flex-row md:gap-4">
             <div className="flex gap-4 md:border-r md:border-tertiary-muted md:pr-4">
               <Rocket aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-secondary" />
 

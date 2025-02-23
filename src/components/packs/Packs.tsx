@@ -1,38 +1,12 @@
 import { CheckCircle } from 'lucide-react';
-import { m, type Variants } from 'motion/react';
+import { m } from 'motion/react';
 import { useFormContext } from 'react-hook-form';
 
 import type { ContactFormData } from '@/components/contact/schema';
-import { packs } from '@/constants/packs';
 import { Button } from '@/components/ui/button';
+import { packs } from '@/constants/packs';
+import { child, delay, stagger } from '@/constants/variants';
 import { cn } from '@/lib/utils';
-
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.05,
-    },
-  },
-};
-
-const childVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
-
-const packVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: (index = 0) => ({
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: index * 0.05,
-      duration: 0.5,
-    },
-  }),
-};
 
 export function Packs() {
   const { setValue } = useFormContext<ContactFormData>();
@@ -54,29 +28,29 @@ export function Packs() {
 
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <m.div
+          variants={stagger}
           initial="hidden"
           whileInView="visible"
-          variants={containerVariants}
           viewport={{ amount: 0.8, once: true }}
           className="mx-auto max-w-2xl text-center"
         >
           <m.p
             id="packs"
-            variants={childVariants}
+            variants={child}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
           >
             Packs
           </m.p>
 
           <m.h2
-            variants={childVariants}
+            variants={child}
             className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl"
           >
             No es magia, es estrategia
           </m.h2>
 
           <m.p
-            variants={childVariants}
+            variants={child}
             className="mx-auto mt-4 w-[16.75rem] font-secondary text-lg/7 text-tertiary md:w-auto"
           >
             Elegí el pack que mejor se adapte a tu marca!
@@ -88,9 +62,9 @@ export function Packs() {
             <m.div
               key={name}
               custom={index}
+              variants={delay}
               initial="hidden"
               whileInView="visible"
-              variants={packVariants}
               viewport={{ amount: 0.5, once: true }}
               className={cn(
                 'flex flex-col justify-between rounded-3xl border border-tertiary p-8 xl:p-10',

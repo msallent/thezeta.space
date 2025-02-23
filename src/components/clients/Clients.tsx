@@ -1,10 +1,8 @@
-import { m, type Variants } from 'motion/react';
-import { ClientsMarquee } from './Marquee';
+import { m } from 'motion/react';
 
-const containerVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
+import { child } from '@/constants/variants';
+
+import { ClientsMarquee } from './Marquee';
 
 export function Clients() {
   return (
@@ -12,9 +10,9 @@ export function Clients() {
       <div className="mx-auto px-6 md:px-8">
         <m.h2
           id="clientes"
+          variants={child}
           initial="hidden"
           whileInView="visible"
-          variants={containerVariants}
           viewport={{ amount: 0.8, once: true }}
           className="-mt-10 pt-10 text-center text-xl/8 font-semibold text-white"
         >
@@ -22,9 +20,9 @@ export function Clients() {
         </m.h2>
 
         <m.div
+          variants={child}
           initial="hidden"
           whileInView="visible"
-          variants={containerVariants}
           viewport={{ amount: 0.8, once: true }}
         >
           <ClientsMarquee />

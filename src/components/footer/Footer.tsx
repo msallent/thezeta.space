@@ -1,18 +1,7 @@
-import { m, type Variants } from 'motion/react';
+import { m } from 'motion/react';
 
 import { links } from '@/constants/footer';
-
-const linkVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: (index) => ({
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: index * 0.05,
-      duration: 0.5,
-    },
-  }),
-};
+import { delay } from '@/constants/variants';
 
 export function Footer() {
   return (
@@ -23,7 +12,7 @@ export function Footer() {
             key={name}
             href={href}
             custom={index}
-            variants={linkVariants}
+            variants={delay}
             initial="hidden"
             whileInView="visible"
             className="text-tertiary hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
@@ -36,7 +25,7 @@ export function Footer() {
 
       <m.p
         custom={links.length}
-        variants={linkVariants}
+        variants={delay}
         initial="hidden"
         whileInView="visible"
         className="mt-10 text-center text-sm/6 text-tertiary"

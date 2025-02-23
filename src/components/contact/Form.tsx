@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
-import { m, type Variants } from 'motion/react';
+import { m } from 'motion/react';
 import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
@@ -25,20 +25,9 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { delay } from '@/constants/variants';
 
 import type { ContactFormData } from './schema';
-
-const formItemVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: (index) => ({
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: index * 0.05,
-      duration: 0.5,
-    },
-  }),
-};
 
 export function ContactForm() {
   const form = useFormContext<ContactFormData>();
@@ -90,9 +79,9 @@ export function ContactForm() {
             render={({ field }) => (
               <m.div
                 custom={0}
+                variants={delay}
                 initial="hidden"
                 whileInView="visible"
-                variants={formItemVariants}
                 viewport={{ amount: 0.8, once: true }}
               >
                 <FormItem>
@@ -112,9 +101,9 @@ export function ContactForm() {
             render={({ field }) => (
               <m.div
                 custom={1}
+                variants={delay}
                 initial="hidden"
                 whileInView="visible"
-                variants={formItemVariants}
                 viewport={{ amount: 0.8, once: true }}
               >
                 <FormItem>
@@ -134,9 +123,9 @@ export function ContactForm() {
             render={({ field }) => (
               <m.div
                 custom={2}
+                variants={delay}
                 initial="hidden"
                 whileInView="visible"
-                variants={formItemVariants}
                 viewport={{ amount: 0.8, once: true }}
               >
                 <FormItem>
@@ -156,9 +145,9 @@ export function ContactForm() {
             render={({ field: { onChange, ...rest } }) => (
               <m.div
                 custom={3}
+                variants={delay}
                 initial="hidden"
                 whileInView="visible"
-                variants={formItemVariants}
                 viewport={{ amount: 0.8, once: true }}
               >
                 <FormItem>
@@ -200,9 +189,9 @@ export function ContactForm() {
               render={({ field }) => (
                 <m.div
                   custom={4}
+                  variants={delay}
                   initial="hidden"
                   whileInView="visible"
-                  variants={formItemVariants}
                   viewport={{ amount: 0.8, once: true }}
                 >
                   <FormItem>
@@ -220,9 +209,9 @@ export function ContactForm() {
 
         <m.div
           custom={5}
+          variants={delay}
           initial="hidden"
           whileInView="visible"
-          variants={formItemVariants}
           viewport={{ amount: 0.8, once: true }}
         >
           <Button className="mt-10 w-full" type="submit" disabled={isSubmitting}>

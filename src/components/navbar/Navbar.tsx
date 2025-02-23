@@ -1,21 +1,10 @@
-import { m, type Variants } from 'motion/react';
+import { m } from 'motion/react';
 import Image from 'next/image';
 
 import logo from '@/assets/images/logo.png';
 import { Menu } from '@/components';
 import { links } from '@/constants/navbar';
-
-const linkVariants: Variants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: (index) => ({
-    y: 0,
-    opacity: 1,
-    transition: {
-      delay: index * 0.05,
-      duration: 0.5,
-    },
-  }),
-};
+import { delay } from '@/constants/variants';
 
 export function Navbar() {
   return (
@@ -29,7 +18,7 @@ export function Navbar() {
               key={title}
               href={href}
               custom={index}
-              variants={linkVariants}
+              variants={delay}
               initial="hidden"
               animate="visible"
               className="rounded-md text-sm/6 font-semibold hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
