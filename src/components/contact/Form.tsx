@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useFormContext } from 'react-hook-form';
+import { m, type Variants } from 'motion/react';
 import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
@@ -26,6 +27,18 @@ import {
 import { Textarea } from '@/components/ui/textarea';
 
 import type { ContactFormData } from './schema';
+
+const formItemVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: (index) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: index * 0.05,
+      duration: 0.5,
+    },
+  }),
+};
 
 export function ContactForm() {
   const form = useFormContext<ContactFormData>();
@@ -75,13 +88,21 @@ export function ContactForm() {
             name="name"
             control={form.control}
             render={({ field }) => (
-              <FormItem>
-                <FormLabel>Nombre y apellido</FormLabel>
-                <FormControl>
-                  <Input type="text" autoComplete="given-name" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+              <m.div
+                custom={0}
+                initial="hidden"
+                whileInView="visible"
+                variants={formItemVariants}
+                viewport={{ amount: 0.8, once: true }}
+              >
+                <FormItem>
+                  <FormLabel>Nombre y apellido</FormLabel>
+                  <FormControl>
+                    <Input type="text" autoComplete="given-name" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </m.div>
             )}
           />
 
@@ -89,13 +110,21 @@ export function ContactForm() {
             name="email"
             control={form.control}
             render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input type="email" autoComplete="email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+              <m.div
+                custom={1}
+                initial="hidden"
+                whileInView="visible"
+                variants={formItemVariants}
+                viewport={{ amount: 0.8, once: true }}
+              >
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input type="email" autoComplete="email" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </m.div>
             )}
           />
 
@@ -103,13 +132,21 @@ export function ContactForm() {
             name="phone"
             control={form.control}
             render={({ field }) => (
-              <FormItem>
-                <FormLabel>Telefono</FormLabel>
-                <FormControl>
-                  <Input type="tel" autoComplete="tel" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+              <m.div
+                custom={2}
+                initial="hidden"
+                whileInView="visible"
+                variants={formItemVariants}
+                viewport={{ amount: 0.8, once: true }}
+              >
+                <FormItem>
+                  <FormLabel>Telefono</FormLabel>
+                  <FormControl>
+                    <Input type="tel" autoComplete="tel" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              </m.div>
             )}
           />
 
@@ -117,34 +154,42 @@ export function ContactForm() {
             name="service"
             control={form.control}
             render={({ field: { onChange, ...rest } }) => (
-              <FormItem>
-                <FormLabel>Pack / Servicio</FormLabel>
-                <Select onValueChange={onChange} {...rest}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectGroup>
-                      <SelectLabel>Packs</SelectLabel>
-                      <SelectItem value="Launch Pack">Launch Pack</SelectItem>
-                      <SelectItem value="Booster Pack">Booster Pack</SelectItem>
-                      <SelectItem value="Premium Pack">Premium Pack</SelectItem>
-                    </SelectGroup>
-                    <SelectGroup>
-                      <SelectLabel>Servicios</SelectLabel>
-                      <SelectItem value="Social Media">Social Media & Paid Media</SelectItem>
-                      <SelectItem value="Desarrollo Web">Diseño & Desarrollo Web</SelectItem>
-                      <SelectItem value="Branding">Identidad & Branding</SelectItem>
-                      <SelectItem value="Contenido">Generación de Contenido</SelectItem>
-                      <SelectItem value="Asesoramiento">Asesoramiento 1:1</SelectItem>
-                    </SelectGroup>
-                    <SelectItem value="Otros">Otros</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
+              <m.div
+                custom={3}
+                initial="hidden"
+                whileInView="visible"
+                variants={formItemVariants}
+                viewport={{ amount: 0.8, once: true }}
+              >
+                <FormItem>
+                  <FormLabel>Pack / Servicio</FormLabel>
+                  <Select onValueChange={onChange} {...rest}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectLabel>Packs</SelectLabel>
+                        <SelectItem value="Launch Pack">Launch Pack</SelectItem>
+                        <SelectItem value="Booster Pack">Booster Pack</SelectItem>
+                        <SelectItem value="Premium Pack">Premium Pack</SelectItem>
+                      </SelectGroup>
+                      <SelectGroup>
+                        <SelectLabel>Servicios</SelectLabel>
+                        <SelectItem value="Social Media">Social Media & Paid Media</SelectItem>
+                        <SelectItem value="Desarrollo Web">Diseño & Desarrollo Web</SelectItem>
+                        <SelectItem value="Branding">Identidad & Branding</SelectItem>
+                        <SelectItem value="Contenido">Generación de Contenido</SelectItem>
+                        <SelectItem value="Asesoramiento">Asesoramiento 1:1</SelectItem>
+                      </SelectGroup>
+                      <SelectItem value="Otros">Otros</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              </m.div>
             )}
           />
 
@@ -153,21 +198,37 @@ export function ContactForm() {
               name="message"
               control={form.control}
               render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Comentarios</FormLabel>
-                  <FormControl>
-                    <Textarea className="resize-none" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+                <m.div
+                  custom={4}
+                  initial="hidden"
+                  whileInView="visible"
+                  variants={formItemVariants}
+                  viewport={{ amount: 0.8, once: true }}
+                >
+                  <FormItem>
+                    <FormLabel>Comentarios</FormLabel>
+                    <FormControl>
+                      <Textarea className="resize-none" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                </m.div>
               )}
             />
           </div>
         </div>
 
-        <Button className="mt-10 w-full" type="submit" disabled={isSubmitting}>
-          Quiero que me contacten!
-        </Button>
+        <m.div
+          custom={5}
+          initial="hidden"
+          whileInView="visible"
+          variants={formItemVariants}
+          viewport={{ amount: 0.8, once: true }}
+        >
+          <Button className="mt-10 w-full" type="submit" disabled={isSubmitting}>
+            Quiero que me contacten!
+          </Button>
+        </m.div>
       </form>
     </Form>
   );

@@ -16,7 +16,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer';
-import { navbarLinks } from '@/constants/navbar';
+import { links } from '@/constants/navbar';
 
 export function Menu() {
   const router = useRouter();
@@ -43,7 +43,7 @@ export function Menu() {
             <Image alt="The Zeta Space" src={logo} className="h-28 w-auto" />
 
             <ul className="flex flex-col gap-2 md:flex-row md:gap-8">
-              {navbarLinks.map(({ title, href }) => (
+              {links.map(({ title, href }) => (
                 <li
                   key={title}
                   onClick={() => onLinkClick(href)}

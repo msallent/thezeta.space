@@ -1,4 +1,21 @@
+import { m, type Variants } from 'motion/react';
+
 import { ContactForm } from './Form';
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const childVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 },
+};
 
 export function Contact() {
   return (
@@ -17,24 +34,46 @@ export function Contact() {
       </div>
 
       <div className="mx-auto max-w-xl lg:max-w-4xl">
-        <h2
-          id="contacto"
-          className="-mt-10 text-balance pt-10 text-4xl font-semibold tracking-tight sm:text-5xl"
+        <m.div
+          initial="hidden"
+          whileInView="visible"
+          variants={containerVariants}
+          viewport={{ amount: 0.8, once: true }}
         >
-          Impulsamos marcas con creatividad y resultados
-        </h2>
+          <m.h2
+            id="contacto"
+            variants={childVariants}
+            className="-mt-10 text-balance pt-10 text-4xl font-semibold tracking-tight sm:text-5xl"
+          >
+            Impulsamos marcas con creatividad y resultados
+          </m.h2>
 
-        <p className="mt-2 text-balance font-secondary text-lg/7 text-tertiary">
-          Listo para empezar? Completá el formulario y te contactamos.
-        </p>
+          <m.p
+            variants={childVariants}
+            className="mt-2 text-balance font-secondary text-lg/7 text-tertiary"
+          >
+            Listo para empezar? Completá el formulario y te contactamos.
+          </m.p>
+        </m.div>
 
         <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
           <ContactForm />
 
-          <div className="flex flex-col gap-7 text-center text-lg/7 font-semibold lg:mt-6 lg:w-80 lg:flex-none lg:text-left">
-            <p>En The Zeta Space convertimos tus ideas en experiencias que venden.</p>
-            <p>Agendá una reunión hoy mismo y descubrí cómo podemos hacer crecer tu marca.</p>
-          </div>
+          <m.div
+            initial="hidden"
+            whileInView="visible"
+            variants={containerVariants}
+            viewport={{ amount: 0.8, once: true }}
+            className="flex flex-col gap-7 text-center text-lg/7 font-semibold lg:mt-6 lg:w-80 lg:flex-none lg:text-left"
+          >
+            <m.p variants={childVariants}>
+              En The Zeta Space convertimos tus ideas en experiencias que venden.
+            </m.p>
+
+            <m.p variants={childVariants}>
+              Agendá una reunión hoy mismo y descubrí cómo podemos hacer crecer tu marca.
+            </m.p>
+          </m.div>
         </div>
       </div>
     </section>

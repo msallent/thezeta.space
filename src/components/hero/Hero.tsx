@@ -1,4 +1,21 @@
+import { m, type Variants } from 'motion/react';
+
 import { Button } from '@/components/ui/button';
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const childVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 },
+};
 
 export function Hero() {
   return (
@@ -17,19 +34,32 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-2xl pb-32 pt-36 sm:py-48 lg:py-56">
-        <div className="flex flex-col gap-8 text-center">
-          <h1 className="text-5xl font-semibold tracking-tight sm:text-7xl">The Zeta Space</h1>
+        <m.div
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="flex flex-col gap-8 text-center"
+        >
+          <m.h1
+            variants={childVariants}
+            className="text-5xl font-semibold tracking-tight sm:text-7xl"
+          >
+            The Zeta Space
+          </m.h1>
 
-          <div className="text-balance text-lg/7 font-medium text-tertiary sm:text-xl/8">
+          <m.div
+            variants={childVariants}
+            className="text-balance text-lg/7 font-medium text-tertiary sm:text-xl/8"
+          >
             <p>Impulsamos marcas con creatividad y resultados</p>
-          </div>
+          </m.div>
 
-          <div className="flex justify-center">
+          <m.div variants={childVariants} className="flex justify-center">
             <Button asChild>
               <a href="#servicios">Conocé como lo hacemos</a>
             </Button>
-          </div>
-        </div>
+          </m.div>
+        </m.div>
       </div>
 
       <div

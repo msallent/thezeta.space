@@ -1,10 +1,38 @@
 import { CheckCircle } from 'lucide-react';
+import { m, type Variants } from 'motion/react';
 import { useFormContext } from 'react-hook-form';
 
 import type { ContactFormData } from '@/components/contact/schema';
 import { packs } from '@/constants/packs';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const childVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: { y: 0, opacity: 1 },
+};
+
+const packVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: (index = 0) => ({
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: index * 0.05,
+      duration: 0.5,
+    },
+  }),
+};
 
 export function Packs() {
   const { setValue } = useFormContext<ContactFormData>();
@@ -25,24 +53,45 @@ export function Packs() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p id="packs" className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary">
+        <m.div
+          initial="hidden"
+          whileInView="visible"
+          variants={containerVariants}
+          viewport={{ amount: 0.8, once: true }}
+          className="mx-auto max-w-2xl text-center"
+        >
+          <m.p
+            id="packs"
+            variants={childVariants}
+            className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
+          >
             Packs
-          </p>
+          </m.p>
 
-          <h2 className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+          <m.h2
+            variants={childVariants}
+            className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl"
+          >
             No es magia, es estrategia
-          </h2>
+          </m.h2>
 
-          <p className="mx-auto mt-4 w-[16.75rem] font-secondary text-lg/7 text-tertiary md:w-auto">
+          <m.p
+            variants={childVariants}
+            className="mx-auto mt-4 w-[16.75rem] font-secondary text-lg/7 text-tertiary md:w-auto"
+          >
             Elegí el pack que mejor se adapte a tu marca!
-          </p>
-        </div>
+          </m.p>
+        </m.div>
 
         <div className="isolate mx-auto mt-12 grid grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {packs.map(({ name, description, features }, index) => (
-            <div
-              key={index}
+            <m.div
+              key={name}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              variants={packVariants}
+              viewport={{ amount: 0.5, once: true }}
               className={cn(
                 'flex flex-col justify-between rounded-3xl border border-tertiary p-8 xl:p-10',
                 index === 0 && 'lg:rounded-r-none lg:border-r-0',
@@ -75,7 +124,7 @@ export function Packs() {
                   Cotizar
                 </a>
               </Button>
-            </div>
+            </m.div>
           ))}
         </div>
       </div>

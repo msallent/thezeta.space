@@ -1,4 +1,4 @@
-export const navbarLinks = [
+export const links = [
   { title: 'Servicios', href: '#servicios' },
   { title: 'Nosotros', href: '#nosotros' },
   { title: 'Packs', href: '#packs' },

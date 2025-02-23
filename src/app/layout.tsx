@@ -1,3 +1,4 @@
+import { domAnimation, LazyMotion, MotionConfig } from 'motion/react';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
@@ -43,8 +44,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="es" className="scroll-smooth">
       <body className={cn('font-primary antialiased', nourdBold.variable, glacialRegular.variable)}>
-        {children}
+        <LazyMotion features={domAnimation} strict>
+          <MotionConfig reducedMotion="user" transition={{ duration: 0.5 }}>
+            {children}
+          </MotionConfig>
+        </LazyMotion>
+
         <Toaster />
+
         <Script
           async
           defer
