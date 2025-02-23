@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
+
 import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
+
 import './globals.css';
 
 const nourdBold = localFont({

@@ -1,9 +1,14 @@
 import { CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useFormContext } from 'react-hook-form';
+
+import type { ContactFormData } from '@/components/contact/schema';
 import { packs } from '@/constants/packs';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 export function Packs() {
+  const { setValue } = useFormContext<ContactFormData>();
+
   return (
     <section className="relative isolate py-24 sm:py-32">
       <div
@@ -35,7 +40,7 @@ export function Packs() {
         </div>
 
         <div className="isolate mx-auto mt-12 grid grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {packs.map((pack, index) => (
+          {packs.map(({ name, description, features }, index) => (
             <div
               key={index}
               className={cn(
@@ -47,13 +52,13 @@ export function Packs() {
             >
               <div>
                 <div className="flex items-center justify-between gap-x-4">
-                  <h3 className="text-lg/7 font-semibold text-secondary">{pack.name}</h3>
+                  <h3 className="text-lg/7 font-semibold text-secondary">{name}</h3>
                 </div>
 
-                <p className="mt-4 text-sm/6 text-tertiary">{pack.description}</p>
+                <p className="mt-4 text-sm/6 text-tertiary">{description}</p>
 
                 <ul role="list" className="mt-8 space-y-3 text-tertiary">
-                  {pack.features.map((feature) => (
+                  {features.map((feature) => (
                     <li key={feature} className="flex gap-x-3 font-secondary">
                       <CheckCircle
                         aria-hidden="true"
@@ -66,7 +71,7 @@ export function Packs() {
               </div>
 
               <Button asChild>
-                <a href="#contacto" className="mt-8">
+                <a onClick={() => setValue('service', name)} href="#contacto" className="mt-8">
                   Cotizar
                 </a>
               </Button>

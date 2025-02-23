@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import logo from '@/assets/images/logo.png';
 import { Menu } from '@/components';
 import { navbarLinks } from '@/constants/navbar';

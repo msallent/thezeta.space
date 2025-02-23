@@ -1,11 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
+import { useFormContext } from 'react-hook-form';
 import { toast } from 'sonner';
-import { z } from 'zod';
 
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -25,31 +24,14 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
 
-const formSchema = z.object({
-  name: z.string().min(1, 'Nombre requerido'),
-  email: z.string().email('Email invalido').min(1, 'Email requerido'),
-  phone: z.string(),
-  service: z.string(),
-  message: z.string(),
-});
+import type { ContactFormData } from './schema';
 
 export function ContactForm() {
+  const form = useFormContext<ContactFormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: '',
-    },
-  });
-
-  const onSubmit = (data: z.infer<typeof formSchema>) => {
+  const onSubmit = (data: ContactFormData) => {
     setIsSubmitting(true);
 
     try {

@@ -1,3 +1,8 @@
+'use client';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { FormProvider, useForm } from 'react-hook-form';
+
 import {
   About,
   Clients,
@@ -9,19 +14,26 @@ import {
   Services,
   WhatsApp,
 } from '@/components';
+import { contactFormSchema, type ContactFormData } from '@/components/contact/schema';
 
 export default function Home() {
+  const contactForm = useForm<ContactFormData>({
+    resolver: zodResolver(contactFormSchema),
+  });
+
   return (
     <div className="relative">
       <Navbar />
 
       <main>
-        <Hero />
-        <Services />
-        <About />
-        <Packs />
-        <Clients />
-        <Contact />
+        <FormProvider {...contactForm}>
+          <Hero />
+          <Services />
+          <About />
+          <Packs />
+          <Clients />
+          <Contact />
+        </FormProvider>
       </main>
 
       <Footer />

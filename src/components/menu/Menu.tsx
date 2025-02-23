@@ -2,8 +2,10 @@
 
 import { useState } from 'react';
 import { CircleX, MenuIcon } from 'lucide-react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { navbarLinks } from '@/constants/navbar';
+
+import logo from '@/assets/images/logo.png';
 import {
   Drawer,
   DrawerClose,
@@ -14,8 +16,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer';
-import Image from 'next/image';
-import logo from '@/assets/images/logo.png';
+import { navbarLinks } from '@/constants/navbar';
 
 export function Menu() {
   const router = useRouter();

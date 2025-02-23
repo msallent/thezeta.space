@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
-import { services } from '@/constants/services';
+import { useFormContext } from 'react-hook-form';
+
+import type { ContactFormData } from '@/components/contact/schema';
 import {
   Carousel,
   CarouselContent,
@@ -10,8 +12,10 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import { services } from '@/constants/services';
 
 export function ServicesCarousel() {
+  const { setValue } = useFormContext<ContactFormData>();
   const [isHovering, setIsHovering] = useState(false);
 
   const onMouseEnter = () => setIsHovering(true);
@@ -24,7 +28,7 @@ export function ServicesCarousel() {
       plugins={[Autoplay({ active: !isHovering })]}
     >
       <CarouselContent>
-        {services.map(({ Icon, description, title }) => (
+        {services.map(({ id, title, description, Icon }) => (
           <CarouselItem key={title} className="flex basis-full flex-col md:basis-1/2 lg:basis-1/3">
             <p className="flex items-center gap-x-3 text-base/7 font-semibold">
               <Icon aria-hidden="true" className="size-6 flex-none text-secondary" />
@@ -36,6 +40,7 @@ export function ServicesCarousel() {
 
               <a
                 href="#contacto"
+                onClick={() => setValue('service', id)}
                 className="mt-6 w-fit text-sm/6 font-semibold text-white hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
               >
                 Más info <span aria-hidden="true">→</span>
