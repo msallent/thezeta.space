@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { CircleX, MenuIcon } from 'lucide-react';
+import { m } from 'motion/react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
@@ -16,6 +17,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer';
+import { motion } from '@/constants/motion';
 import { links } from '@/constants/navbar';
 
 export function Menu() {
@@ -43,17 +45,19 @@ export function Menu() {
             <Image alt="The Zeta Space" src={logo} className="h-28 w-auto" />
 
             <ul className="flex flex-col gap-2 md:flex-row md:gap-8">
-              {links.map(({ title, href }) => (
-                <li
+              {links.map(({ title, href }, index) => (
+                <m.li
                   key={title}
                   onClick={() => onLinkClick(href)}
+                  custom={index}
                   className="text-lg/7 font-semibold text-tertiary"
+                  {...motion.delay}
                 >
                   <span className="md:hidden" aria-hidden="true">
                     →
                   </span>{' '}
                   {title}
-                </li>
+                </m.li>
               ))}
             </ul>
           </div>
