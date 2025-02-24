@@ -25,7 +25,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
-import { delay } from '@/constants/variants';
+import { motion } from '@/constants/motion';
 
 import type { ContactFormData } from './schema';
 
@@ -77,13 +77,7 @@ export function ContactForm() {
             name="name"
             control={form.control}
             render={({ field }) => (
-              <m.div
-                custom={0}
-                variants={delay}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.8, once: true }}
-              >
+              <m.div custom={0} {...motion.delay}>
                 <FormItem>
                   <FormLabel>Nombre y apellido</FormLabel>
                   <FormControl>
@@ -99,13 +93,7 @@ export function ContactForm() {
             name="email"
             control={form.control}
             render={({ field }) => (
-              <m.div
-                custom={1}
-                variants={delay}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.8, once: true }}
-              >
+              <m.div custom={1} {...motion.delay}>
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
@@ -121,13 +109,7 @@ export function ContactForm() {
             name="phone"
             control={form.control}
             render={({ field }) => (
-              <m.div
-                custom={2}
-                variants={delay}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.8, once: true }}
-              >
+              <m.div custom={2} {...motion.delay}>
                 <FormItem>
                   <FormLabel>Telefono</FormLabel>
                   <FormControl>
@@ -143,13 +125,7 @@ export function ContactForm() {
             name="service"
             control={form.control}
             render={({ field: { onChange, ...rest } }) => (
-              <m.div
-                custom={3}
-                variants={delay}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ amount: 0.8, once: true }}
-              >
+              <m.div custom={3} {...motion.delay}>
                 <FormItem>
                   <FormLabel>Pack / Servicio</FormLabel>
                   <Select onValueChange={onChange} {...rest}>
@@ -187,13 +163,7 @@ export function ContactForm() {
               name="message"
               control={form.control}
               render={({ field }) => (
-                <m.div
-                  custom={4}
-                  variants={delay}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ amount: 0.8, once: true }}
-                >
+                <m.div custom={4} {...motion.delay}>
                   <FormItem>
                     <FormLabel>Comentarios</FormLabel>
                     <FormControl>
@@ -207,13 +177,7 @@ export function ContactForm() {
           </div>
         </div>
 
-        <m.div
-          custom={5}
-          variants={delay}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.8, once: true }}
-        >
+        <m.div custom={5} {...motion.delay}>
           <Button className="mt-10 w-full" type="submit" disabled={isSubmitting}>
             Quiero que me contacten!
           </Button>

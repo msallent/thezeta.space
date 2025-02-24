@@ -1,7 +1,7 @@
 import { m } from 'motion/react';
 import { Rocket, Sparkle } from 'lucide-react';
 
-import { child, stagger } from '@/constants/variants';
+import { motion } from '@/constants/motion';
 
 export function About() {
   return (
@@ -20,31 +20,25 @@ export function About() {
       </div>
 
       <div className="px-6 py-24 sm:py-32 md:px-8">
-        <m.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.8, once: true }}
-          className="mx-auto max-w-2xl text-center"
-        >
+        <m.div className="mx-auto max-w-2xl text-center" {...motion.stagger}>
           <m.p
             id="nosotros"
-            variants={child}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
+            {...motion.child}
           >
             Nosotros
           </m.p>
 
           <m.h2
-            variants={child}
             className="mt-2 text-balance text-4xl font-semibold tracking-tight lg:text-7xl"
+            {...motion.child}
           >
             Bienvenidos a The Zeta Space
           </m.h2>
 
           <m.p
-            variants={child}
             className="mt-6 text-balance text-lg/7 font-medium text-tertiary sm:text-xl/8"
+            {...motion.child}
           >
             Donde la creatividad de la Generación Z se convierte en estrategias digitales que
             realmente funcionan.
@@ -52,18 +46,15 @@ export function About() {
         </m.div>
 
         <m.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.8, once: true }}
           className="mx-auto mt-12 max-w-3xl font-secondary text-lg/7 text-tertiary"
+          {...motion.stagger}
         >
-          <m.p variants={child} className="text-center">
+          <m.p className="text-center" {...motion.child}>
             Nuestra misión es llevar tu marca al siguiente nivel con soluciones innovadoras y
             personalizadas.
           </m.p>
 
-          <m.div variants={child} className="mt-8 flex flex-col gap-8 md:flex-row md:gap-4">
+          <m.div className="mt-8 flex flex-col gap-8 md:flex-row md:gap-4" {...motion.child}>
             <div className="flex gap-4 md:border-r md:border-tertiary-muted md:pr-4">
               <Rocket aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-secondary" />
 

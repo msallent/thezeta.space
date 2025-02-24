@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 import logo from '@/assets/images/logo.png';
 import { Menu } from '@/components';
+import { motion } from '@/constants/motion';
 import { links } from '@/constants/navbar';
-import { delay } from '@/constants/variants';
 
 export function Navbar() {
   return (
@@ -18,10 +18,8 @@ export function Navbar() {
               key={title}
               href={href}
               custom={index}
-              variants={delay}
-              initial="hidden"
-              animate="visible"
               className="rounded-md text-sm/6 font-semibold hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
+              {...motion.delay}
             >
               {title}
             </m.a>

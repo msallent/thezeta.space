@@ -1,7 +1,7 @@
 import { m } from 'motion/react';
 
 import { Button } from '@/components/ui/button';
-import { child, stagger } from '@/constants/variants';
+import { motion } from '@/constants/motion';
 
 export function Hero() {
   return (
@@ -20,25 +20,19 @@ export function Hero() {
       </div>
 
       <div className="mx-auto max-w-2xl pb-32 pt-36 sm:py-48 lg:py-56">
-        <m.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.8, once: true }}
-          className="flex flex-col gap-8 text-center"
-        >
-          <m.h1 variants={child} className="text-5xl font-semibold tracking-tight sm:text-7xl">
+        <m.div className="flex flex-col gap-8 text-center" {...motion.stagger}>
+          <m.h1 className="text-5xl font-semibold tracking-tight sm:text-7xl" {...motion.child}>
             The Zeta Space
           </m.h1>
 
           <m.div
-            variants={child}
             className="text-balance text-lg/7 font-medium text-tertiary sm:text-xl/8"
+            {...motion.child}
           >
             <p>Impulsamos marcas con creatividad y resultados</p>
           </m.div>
 
-          <m.div variants={child} className="flex justify-center">
+          <m.div className="flex justify-center" {...motion.child}>
             <Button asChild>
               <a href="#servicios">Conocé como lo hacemos</a>
             </Button>

@@ -4,8 +4,8 @@ import { useFormContext } from 'react-hook-form';
 
 import type { ContactFormData } from '@/components/contact/schema';
 import { Button } from '@/components/ui/button';
+import { motion } from '@/constants/motion';
 import { packs } from '@/constants/packs';
-import { child, delay, stagger } from '@/constants/variants';
 import { cn } from '@/lib/utils';
 
 export function Packs() {
@@ -27,31 +27,25 @@ export function Packs() {
       </div>
 
       <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <m.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.8, once: true }}
-          className="mx-auto max-w-2xl text-center"
-        >
+        <m.div className="mx-auto max-w-2xl text-center" {...motion.stagger}>
           <m.p
             id="packs"
-            variants={child}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
+            {...motion.child}
           >
             Packs
           </m.p>
 
           <m.h2
-            variants={child}
             className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl"
+            {...motion.child}
           >
             No es magia, es estrategia
           </m.h2>
 
           <m.p
-            variants={child}
             className="mx-auto mt-4 w-[16.75rem] font-secondary text-lg/7 text-tertiary md:w-auto"
+            {...motion.child}
           >
             Elegí el pack que mejor se adapte a tu marca!
           </m.p>
@@ -62,16 +56,14 @@ export function Packs() {
             <m.div
               key={name}
               custom={index}
-              variants={delay}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ amount: 0.5, once: true }}
               className={cn(
                 'flex flex-col justify-between rounded-3xl border border-tertiary p-8 xl:p-10',
                 index === 0 && 'lg:rounded-r-none lg:border-r-0',
                 index === packs.length - 1 && 'lg:rounded-l-none lg:border-l-0',
                 index === 1 ? 'lg:z-10 lg:rounded-b-none' : 'lg:mt-8',
               )}
+              {...motion.delay}
+              viewport={{ amount: 0.5, once: true }}
             >
               <div>
                 <div className="flex items-center justify-between gap-x-4">

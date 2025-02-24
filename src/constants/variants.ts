@@ -5,16 +5,6 @@ export const child: Variants = {
   visible: { y: 0, opacity: 1 },
 };
 
-export const stagger: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      duration: 0.5,
-      staggerChildren: 0.05,
-    },
-  },
-};
-
 export const delay: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: (index) => ({
@@ -25,4 +15,14 @@ export const delay: Variants = {
       duration: 0.5,
     },
   }),
+};
+
+export const stagger: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.05,
+    },
+  },
 };

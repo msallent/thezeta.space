@@ -1,6 +1,6 @@
 import { m } from 'motion/react';
 
-import { child, stagger } from '@/constants/variants';
+import { motion } from '@/constants/motion';
 
 import { ContactForm } from './Form';
 
@@ -21,23 +21,18 @@ export function Contact() {
       </div>
 
       <div className="mx-auto max-w-xl lg:max-w-4xl">
-        <m.div
-          variants={stagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.8, once: true }}
-        >
+        <m.div {...motion.stagger}>
           <m.h2
             id="contacto"
-            variants={child}
             className="-mt-10 text-balance pt-10 text-4xl font-semibold tracking-tight sm:text-5xl"
+            {...motion.child}
           >
             Impulsamos marcas con creatividad y resultados
           </m.h2>
 
           <m.p
-            variants={child}
             className="mt-2 text-balance font-secondary text-lg/7 text-tertiary"
+            {...motion.child}
           >
             Listo para empezar? Completá el formulario y te contactamos.
           </m.p>
@@ -47,17 +42,14 @@ export function Contact() {
           <ContactForm />
 
           <m.div
-            variants={stagger}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ amount: 0.8, once: true }}
             className="flex flex-col gap-7 text-center text-lg/7 font-semibold lg:mt-6 lg:w-80 lg:flex-none lg:text-left"
+            {...motion.stagger}
           >
-            <m.p variants={child}>
+            <m.p {...motion.child}>
               En The Zeta Space convertimos tus ideas en experiencias que venden.
             </m.p>
 
-            <m.p variants={child}>
+            <m.p {...motion.child}>
               Agendá una reunión hoy mismo y descubrí cómo podemos hacer crecer tu marca.
             </m.p>
           </m.div>
