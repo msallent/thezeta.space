@@ -12,6 +12,8 @@ export function Footer() {
             key={name}
             href={href}
             custom={index}
+            target={href === '#' ? '_self' : '_blank'}
+            rel={href === '#' ? undefined : 'noreferrer'}
             className="text-tertiary hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
             {...motion.delay}
           >

@@ -7,9 +7,9 @@ export function WhatsApp() {
         <a
           target="_blank"
           rel="noreferrer"
-          aria-label="Contactanos por WhatsApp"
           href={`https://wa.me/+5491160380070?text=${encodeURIComponent('Hola! Estoy interesado en los servicios de The Zeta Space.')}`}
         >
+          <span className="sr-only">Contactanos por WhatsApp</span>
           <svg
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"

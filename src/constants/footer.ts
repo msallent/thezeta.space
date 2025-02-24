@@ -8,7 +8,7 @@ export const links = [
   },
   {
     name: 'Instagram',
-    href: '#',
+    href: 'https://instagram.com/thezeta.space/',
     Icon: Instagram,
   },
   {
