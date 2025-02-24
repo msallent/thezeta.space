@@ -19,6 +19,13 @@ import { contactFormSchema, type ContactFormData } from '@/components/contact/sc
 export default function Home() {
   const contactForm = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: '',
+    },
   });
 
   return (
