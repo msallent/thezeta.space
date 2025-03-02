@@ -1,0 +1,160 @@
+{
+  "metadata": {
+    "title": "Potenciá tu negocio con The Zeta Space | Marketing Digital 🚀",
+    "description": "Impulsamos marcas con estrategias digitales creativas. Social Media, Paid Media, SEO, Branding y Web. Creá, conectá y vendé en el mundo digital."
+  },
+  "navbar": {
+    "services": "Servicios",
+    "about": "Nosotros",
+    "packs": "Packs",
+    "clients": "Clientes",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "Impulsamos marcas con creatividad y resultados",
+    "cta": "Conocé como lo hacemos"
+  },
+  "services": {
+    "title": "Servicios",
+    "heading": "Potenciá tu negocio",
+    "subtitle": "Cada servicio que ofrecemos es una pieza clave para hacer crecer tu negocio y que tu marca sea inolvidable.",
+    "carousel": {
+      "items": {
+        "social-media": {
+          "id": "Social Media",
+          "title": "Social Media",
+          "description": "Creamos contenido de valor, atractivo e interactivo para tus Redes Sociales, con estrategias personalizadas y resultados medibles."
+        },
+        "paid-media": {
+          "id": "Social Media",
+          "title": "Paid Media",
+          "description": "Invertí en plataformas digitales: Meta, Google, Tiktok, Linkedin Ads. Las manejamos con precisión de expertos para maximizar resultados mientras optimizamos cada peso invertido. Acá no se desperdicia nada!"
+        },
+        "web-development": {
+          "id": "Desarrollo Web",
+          "title": "Diseño & Desarrollo web y apps",
+          "description": "Creamos Sitios Web y Apps que tus usuarios no pueden dejar de usar. Trabajamos en experiencias digitales que conectan, desde el diseño hasta la funcionalidad, hacemos que todo sea intuitivo, atractivo y esté listo para vender."
+        },
+        "branding": {
+          "id": "Branding",
+          "title": "Branding",
+          "description": "Creamos marcas que no pasan desapercibidas: Logos memorables, colores y tipografías que hablan de vos. Diseñamos una identidad visual única que conecta con tu audiencia y deja huella en el mundo digital."
+        },
+        "content": {
+          "id": "Contenido",
+          "title": "Generación de Contenido",
+          "description": "Realizamos producciones en interior y exterior, creando imágenes y videos que transmiten emociones, cuentan tu historia y hacen que tus productos y servicios brillen como nunca."
+        },
+        "consulting": {
+          "id": "Asesoramiento",
+          "title": "Asesoramiento 1:1 y Capacitaciones",
+          "description": "Convertimos tus desafíos en oportunidades. Ya sea para tu negocio o para tu marca personal, creamos estrategias a medida, con insights claros y soluciones prácticas que te ayudan a brillar en el mundo digital. Porque el éxito se logra con ideas claras y acciones concretas."
+        }
+      },
+      "cta": "Más info",
+      "previous": "Elemento anterior",
+      "next": "Elemento siguiente"
+    }
+  },
+  "about": {
+    "title": "Nosotros",
+    "heading": "Bienvenidos a The Zeta Space",
+    "subtitle": "Donde la creatividad de la Generación Z se convierte en estrategias digitales que realmente funcionan.",
+    "description": "Nuestra misión es llevar tu marca al siguiente nivel con soluciones innovadoras y personalizadas.",
+    "columns": {
+      "first": "Diseñamos equipos a medida para cada proyecto, seleccionando a los mejores expertos en cada área, que se ajusten a las necesidades específicas de tu negocio.",
+      "second": "Creemos en el poder del trabajo en equipo, en la constante búsqueda de resultados concretos y en la capacidad de reinventarnos todos los días."
+    }
+  },
+  "packs": {
+    "title": "Packs",
+    "heading": "No es magia, es estrategia",
+    "subtitle": "Elegí el pack que mejor se adapte a tu marca!",
+    "options": {
+      "launch": {
+        "title": "Launch Pack",
+        "description": "Lo esencial para tu presencia en plataformas digitales.",
+        "features": {
+          "social-media": "Gestión de Redes Sociales: 3 contenidos semanales + 3 historias semanales",
+          "planning": "Planning estratégico de contenidos mensuales. Incluye diseños y copies",
+          "report": "Informe mensual de rendimiento y recomendaciones de mejora"
+        }
+      },
+      "booster": {
+        "title": "Booster Pack",
+        "description": "Incluye Launch Pack, más un impulso publicitario.",
+        "features": {
+          "social-media": "Gestión de Redes Sociales: 3 contenidos semanales + 4 historias semanales",
+          "email-marketing": "Email Marketing: 2 envios mensuales",
+          "paid-media": "Pauta Publicitaria en Meta Ads: Diseño de anuncios personalizados y gestión de campañas con optimización continua",
+          "content": "Producción y generación de contenido para Redes Sociales y Pauta"
+        }
+      },
+      "premium": {
+        "title": "Premium Pack",
+        "description": "Incluye Booster Pack, más asesorías 1:1.",
+        "features": {
+          "social-media": "Gestión de Redes Sociales: 4 contenidos semanales + 5 historias semanales",
+          "email-marketing": "Email Marketing: 4 envios mensuales",
+          "paid-media": "Pauta Publicitaria en Meta Ads: Diseño de anuncios personalizados y gestión de campañas con optimización continua",
+          "consulting": "Asesorías 1:1 - Reunión semanal con estrategias a medida para potenciar tu negocio"
+        }
+      }
+    },
+    "cta": "Cotizar"
+  },
+  "clients": {
+    "heading": "Clientes que confían en nosotros"
+  },
+  "contact": {
+    "heading": "Impulsamos marcas con creatividad y resultados",
+    "subtitle": "Listo para empezar? Completá el formulario y te contactamos.",
+    "form": {
+      "name": "Nombre y apellido",
+      "email": "Email",
+      "phone": "Telefono",
+      "service": {
+        "label": "Pack / Servicio",
+        "options": {
+          "packs": {
+            "label": "Packs",
+            "launch": "Launch Pack",
+            "booster": "Booster Pack",
+            "premium": "Premium Pack"
+          },
+          "services": {
+            "label": "Servicios",
+            "social-media": "Social Media & Paid Media",
+            "web-development": "Diseño & Desarrollo Web",
+            "branding": "Identidad & Branding",
+            "content": "Generación de Contenido",
+            "consulting": "Asesoramiento 1:1"
+          },
+          "other": "Otros"
+        }
+      },
+      "message": "Comentarios",
+      "cta": "Quiero que me contacten!",
+      "errors": {
+        "name-required": "Nombre requerido",
+        "email-invalid": "Email inválido"
+      }
+    },
+    "aside": {
+      "first": "En The Zeta Space convertimos tus ideas en experiencias que venden.",
+      "second": "Agendá una reunión hoy mismo y descubrí cómo podemos hacer crecer tu marca."
+    },
+    "success": {
+      "title": "Gracias por tu mensaje!",
+      "description": "Nos pondremos en contacto a la brevedad."
+    },
+    "error": {
+      "title": "Ups! Algo salió mal.",
+      "description": "Por favor, intentá nuevamente."
+    }
+  },
+  "whatsapp": {
+    "cta": "Contactanos por WhatsApp",
+    "message": "Hola! Estoy interesado en los servicios de The Zeta Space."
+  }
+}
