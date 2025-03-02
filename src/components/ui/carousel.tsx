@@ -165,8 +165,9 @@ function CarouselPrevious({
   className,
   variant = 'outline',
   size = 'icon',
+  label,
   ...props
-}: React.ComponentProps<typeof Button>) {
+}: React.ComponentProps<typeof Button> & { label: string }) {
   const { scrollPrev, canScrollPrev } = useCarousel();
 
   return (
@@ -179,7 +180,7 @@ function CarouselPrevious({
       {...props}
     >
       <ArrowLeft />
-      <span className="sr-only">Elemento anterior</span>
+      <span className="sr-only">{label}</span>
     </Button>
   );
 }
@@ -188,8 +189,9 @@ function CarouselNext({
   className,
   variant = 'outline',
   size = 'icon',
+  label,
   ...props
-}: React.ComponentProps<typeof Button>) {
+}: React.ComponentProps<typeof Button> & { label: string }) {
   const { scrollNext, canScrollNext } = useCarousel();
 
   return (
@@ -202,7 +204,7 @@ function CarouselNext({
       {...props}
     >
       <ArrowRight />
-      <span className="sr-only">Elemento siguiente</span>
+      <span className="sr-only">{label}</span>
     </Button>
   );
 }

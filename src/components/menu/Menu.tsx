@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { CircleX, MenuIcon } from 'lucide-react';
 import { m } from 'motion/react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
 import logo from '@/assets/images/logo.png';
@@ -22,6 +23,7 @@ import { links } from '@/constants/navbar';
 
 export function Menu() {
   const router = useRouter();
+  const t = useTranslations('navbar');
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,10 +47,10 @@ export function Menu() {
             <Image alt="The Zeta Space" src={logo} className="h-28 w-auto" />
 
             <ul className="flex flex-col gap-2 md:flex-row md:gap-8">
-              {links.map(({ title, href }, index) => (
+              {links.map((key, index) => (
                 <m.li
-                  key={title}
-                  onClick={() => onLinkClick(href)}
+                  key={key}
+                  onClick={() => onLinkClick(`#${t(key).toLowerCase()}`)}
                   custom={index}
                   className="text-lg/7 font-semibold text-tertiary"
                   {...motion.delay}
@@ -56,7 +58,7 @@ export function Menu() {
                   <span className="md:hidden" aria-hidden="true">
                     →
                   </span>{' '}
-                  {title}
+                  {t(key)}
                 </m.li>
               ))}
             </ul>

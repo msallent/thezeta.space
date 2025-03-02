@@ -1,7 +1,1 @@
-export const links = [
-  { title: 'Servicios', href: '#servicios' },
-  { title: 'Nosotros', href: '#nosotros' },
-  { title: 'Packs', href: '#packs' },
-  { title: 'Clientes', href: '#clientes' },
-  { title: 'Contacto', href: '#contacto' },
-];
+export const links = ['services', 'about', 'packs', 'clients', 'contact'] as const;
