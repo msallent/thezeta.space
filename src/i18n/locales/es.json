@@ -37,7 +37,7 @@
         },
         "branding": {
           "id": "Branding",
-          "title": "Branding",
+          "title": "Identidad de marca & Branding",
           "description": "Creamos marcas que no pasan desapercibidas: Logos memorables, colores y tipografías que hablan de vos. Diseñamos una identidad visual única que conecta con tu audiencia y deja huella en el mundo digital."
         },
         "content": {
@@ -96,7 +96,7 @@
         "features": {
           "social-media": "Gestión de Redes Sociales: 4 contenidos semanales + 5 historias semanales",
           "email-marketing": "Email Marketing: 4 envios mensuales",
-          "paid-media": "Pauta Publicitaria en Meta Ads: Diseño de anuncios personalizados y gestión de campañas con optimización continua",
+          "paid-media": "Pauta Publicitaria en Meta Ads & Google Ads: Diseño de anuncios personalizados y gestión de campañas con optimización continua",
           "consulting": "Asesorías 1:1 - Reunión semanal con estrategias a medida para potenciar tu negocio"
         }
       }
@@ -112,7 +112,7 @@
     "form": {
       "name": "Nombre y apellido",
       "email": "Email",
-      "phone": "Telefono",
+      "phone": "Teléfono",
       "service": {
         "label": "Pack / Servicio",
         "options": {
