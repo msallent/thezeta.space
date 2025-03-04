@@ -14,6 +14,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { services } from '@/constants/services';
+import { formatId } from '@/lib/utils';
 
 export function ServicesCarousel() {
   const t = useTranslations('services.carousel');
@@ -43,7 +44,7 @@ export function ServicesCarousel() {
               <p className="font-secondary">{t(`items.${key}.description`)}</p>
 
               <a
-                href={`#${t2('contact').toLowerCase()}`}
+                href={`#${formatId(t2('contact'))}`}
                 onClick={() => setValue('service', t(`items.${key}.id`))}
                 className="mt-6 w-fit text-sm/6 font-semibold text-white hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
               >

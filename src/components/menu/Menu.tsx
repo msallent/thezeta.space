@@ -20,6 +20,7 @@ import {
 } from '@/components/ui/drawer';
 import { motion } from '@/constants/motion';
 import { links } from '@/constants/navbar';
+import { formatId } from '@/lib/utils';
 
 export function Menu() {
   const router = useRouter();
@@ -50,7 +51,7 @@ export function Menu() {
               {links.map((key, index) => (
                 <m.li
                   key={key}
-                  onClick={() => onLinkClick(`#${t(key).toLowerCase()}`)}
+                  onClick={() => onLinkClick(`#${formatId(t(key))}`)}
                   custom={index}
                   className="text-lg/7 font-semibold text-tertiary"
                   {...motion.delay}

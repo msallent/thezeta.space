@@ -7,7 +7,7 @@ import type { ContactFormData } from '@/components/contact/schema';
 import { Button } from '@/components/ui/button';
 import { motion } from '@/constants/motion';
 import { packs } from '@/constants/packs';
-import { cn } from '@/lib/utils';
+import { cn, formatId } from '@/lib/utils';
 
 export function Packs() {
   const t = useTranslations('packs');
@@ -33,7 +33,7 @@ export function Packs() {
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <m.div className="mx-auto max-w-2xl text-center" {...motion.stagger}>
           <m.p
-            id={`${t2('packs').toLowerCase()}`}
+            id={formatId(t2('packs'))}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
             {...motion.child}
           >
@@ -94,7 +94,7 @@ export function Packs() {
               <Button asChild>
                 <a
                   onClick={() => setValue('service', t(`options.${key}.title`))}
-                  href={`#${t2('contact').toLowerCase()}`}
+                  href={`#${formatId(t2('contact'))}`}
                   className="mt-8"
                 >
                   {t('cta')}

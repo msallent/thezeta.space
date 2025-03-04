@@ -3,6 +3,7 @@ import { m } from 'motion/react';
 import { useTranslations } from 'next-intl';
 
 import { motion } from '@/constants/motion';
+import { formatId } from '@/lib/utils';
 
 export function About() {
   const t = useTranslations('about');
@@ -26,7 +27,7 @@ export function About() {
       <div className="px-6 py-24 sm:py-32 md:px-8">
         <m.div className="mx-auto max-w-2xl text-center" {...motion.stagger}>
           <m.p
-            id={`${t2('about').toLowerCase()}`}
+            id={formatId(t2('about'))}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
             {...motion.child}
           >

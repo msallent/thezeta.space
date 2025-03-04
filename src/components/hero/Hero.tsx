@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import { motion } from '@/constants/motion';
+import { formatId } from '@/lib/utils';
 
 export function Hero() {
   const t = useTranslations('hero');
@@ -38,7 +39,7 @@ export function Hero() {
 
           <m.div className="flex justify-center" {...motion.child}>
             <Button asChild>
-              <a href={`#${t2('services').toLowerCase()}`}>{t('cta')}</a>
+              <a href={formatId(t2('services'))}>{t('cta')}</a>
             </Button>
           </m.div>
         </m.div>

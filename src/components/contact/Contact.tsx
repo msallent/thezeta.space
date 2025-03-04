@@ -2,6 +2,7 @@ import { m } from 'motion/react';
 import { useTranslations } from 'next-intl';
 
 import { motion } from '@/constants/motion';
+import { formatId } from '@/lib/utils';
 
 import { ContactForm } from './Form';
 
@@ -27,7 +28,7 @@ export function Contact() {
       <div className="mx-auto max-w-xl lg:max-w-4xl">
         <m.div {...motion.stagger}>
           <m.h2
-            id={`${t2('contact').toLowerCase()}`}
+            id={formatId(t2('contact'))}
             className="-mt-10 text-balance pt-10 text-4xl font-semibold tracking-tight sm:text-5xl"
             {...motion.child}
           >

@@ -2,6 +2,7 @@ import { m } from 'motion/react';
 import { useTranslations } from 'next-intl';
 
 import { motion } from '@/constants/motion';
+import { formatId } from '@/lib/utils';
 
 import { ClientsMarquee } from './Marquee';
 
@@ -13,7 +14,7 @@ export function Clients() {
     <section className="py-24 sm:py-32">
       <m.div className="mx-auto px-6 md:px-8" {...motion.stagger}>
         <m.h2
-          id={`${t2('clients').toLowerCase()}`}
+          id={formatId(t2('clients'))}
           className="-mt-10 pt-10 text-center text-xl/8 font-semibold text-white"
           {...motion.child}
         >

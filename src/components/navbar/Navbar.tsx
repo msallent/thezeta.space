@@ -6,6 +6,7 @@ import logo from '@/assets/images/logo.png';
 import { Menu } from '@/components';
 import { motion } from '@/constants/motion';
 import { links } from '@/constants/navbar';
+import { formatId } from '@/lib/utils';
 
 import { LocaleSwitch } from './LocaleSwitch';
 
@@ -25,7 +26,7 @@ export function Navbar() {
           {links.map((key, index) => (
             <m.a
               key={key}
-              href={`#${t(key).toLowerCase()}`}
+              href={`#${formatId(t(key))}`}
               custom={index + 1}
               className="rounded-md text-sm/6 font-semibold hover:text-secondary focus-visible:outline-offset-2 focus-visible:outline-secondary"
               {...motion.delay}

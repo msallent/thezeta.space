@@ -2,6 +2,7 @@ import { m } from 'motion/react';
 import { useTranslations } from 'next-intl';
 
 import { motion } from '@/constants/motion';
+import { formatId } from '@/lib/utils';
 
 import { ServicesCarousel } from './Carousel';
 
@@ -14,7 +15,7 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <m.div className="mx-auto max-w-[620px] text-center" {...motion.stagger}>
           <m.p
-            id={`${t2('services').toLowerCase()}`}
+            id={formatId(t2('services'))}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
             {...motion.child}
           >
