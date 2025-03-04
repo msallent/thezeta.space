@@ -4,20 +4,20 @@
     "description": "Impulsamos marcas con estrategias digitales creativas. Social Media, Paid Media, SEO, Branding y Web. Creá, conectá y vendé en el mundo digital."
   },
   "navbar": {
-    "services": "Servicios",
-    "about": "Nosotros",
+    "services": "Services",
+    "about": "About Us",
     "packs": "Packs",
-    "clients": "Clientes",
-    "contact": "Contacto"
+    "clients": "Clients",
+    "contact": "Contact"
   },
   "hero": {
-    "subtitle": "Impulsamos marcas con creatividad y resultados",
-    "cta": "Conocé como lo hacemos"
+    "subtitle": "We help you grow your business with creativity and results",
+    "cta": "See how we do it"
   },
   "services": {
-    "title": "Servicios",
-    "heading": "Potenciá tu negocio",
-    "subtitle": "Cada servicio que ofrecemos es una pieza clave para hacer crecer tu negocio y que tu marca sea inolvidable.",
+    "title": "Services",
+    "heading": "Boost your business",
+    "subtitle": "Every service we offer is essential to grow your business and make your brand unforgettable.",
     "carousel": {
       "items": {
         "social-media": {
@@ -32,89 +32,89 @@
         },
         "web-development": {
           "id": "Desarrollo Web",
-          "title": "Diseño & Desarrollo web y apps",
-          "description": "Creamos Sitios Web y Apps que tus usuarios no pueden dejar de usar. Trabajamos en experiencias digitales que conectan, desde el diseño hasta la funcionalidad, hacemos que todo sea intuitivo, atractivo y esté listo para vender."
+          "title": "Web and app Design & Development",
+          "description": "We create websites and apps that your users will love. From design to functionality, we craft digital experiences that connect—making everything interactive, seamless and ready to sell."
         },
         "branding": {
           "id": "Branding",
-          "title": "Branding",
-          "description": "Creamos marcas que no pasan desapercibidas: Logos memorables, colores y tipografías que hablan de vos. Diseñamos una identidad visual única que conecta con tu audiencia y deja huella en el mundo digital."
+          "title": "Brand Identity",
+          "description": "We craft unforgettable logos, a striking color palette, and typography that truly represents you, designing a unique visual identity that resonates with your audience in the digital world."
         },
         "content": {
           "id": "Contenido",
-          "title": "Generación de Contenido",
-          "description": "Realizamos producciones en interior y exterior, creando imágenes y videos que transmiten emociones, cuentan tu historia y hacen que tus productos y servicios brillen como nunca."
+          "title": "Content Creation",
+          "description": "We produce high-quality photos and videos that capture your audience's attention. Because in the digital world, first impressions are visual!"
         },
         "consulting": {
           "id": "Asesoramiento",
-          "title": "Asesoramiento 1:1 y Capacitaciones",
-          "description": "Convertimos tus desafíos en oportunidades. Ya sea para tu negocio o para tu marca personal, creamos estrategias a medida, con insights claros y soluciones prácticas que te ayudan a brillar en el mundo digital. Porque el éxito se logra con ideas claras y acciones concretas."
+          "title": "1:1 Consulting",
+          "description": "We perfect your brand. Whether for your business or personal brand, we develop tailored strategies with clear objectives and practical solutions to help you grow."
         }
       },
-      "cta": "Más info",
-      "previous": "Elemento anterior",
-      "next": "Elemento siguiente"
+      "cta": "More info",
+      "previous": "Previous slide",
+      "next": "Next slide"
     }
   },
   "about": {
-    "title": "Nosotros",
-    "heading": "Bienvenidos a The Zeta Space",
-    "subtitle": "Donde la creatividad de la Generación Z se convierte en estrategias digitales que realmente funcionan.",
-    "description": "Nuestra misión es llevar tu marca al siguiente nivel con soluciones innovadoras y personalizadas.",
+    "title": "About Us",
+    "heading": "Welcome to The Zeta Space",
+    "subtitle": "Where Generation Z creativity turns into digital strategies that truly work.",
+    "description": "Our mission is to take your brand to the next level with innovative and customized solutions.",
     "columns": {
-      "first": "Diseñamos equipos a medida para cada proyecto, seleccionando a los mejores expertos en cada área, que se ajusten a las necesidades específicas de tu negocio.",
-      "second": "Creemos en el poder del trabajo en equipo, en la constante búsqueda de resultados concretos y en la capacidad de reinventarnos todos los días."
+      "first": "We build tailor-made teams for each project, selecting the best experts in every area to meet your business's specific needs.",
+      "second": "We believe in the power of teamwork, the constant pursuit of tangible results, and the ability to reinvent ourselves every day."
     }
   },
   "packs": {
     "title": "Packs",
-    "heading": "No es magia, es estrategia",
-    "subtitle": "Elegí el pack que mejor se adapte a tu marca!",
+    "heading": "It's not magic, it's strategy",
+    "subtitle": "Choose the pack that best suits your brand!",
     "options": {
       "launch": {
         "title": "Launch Pack",
-        "description": "Lo esencial para tu presencia en plataformas digitales.",
+        "description": "Everything you need to establish your digital presence.",
         "features": {
-          "social-media": "Gestión de Redes Sociales: 3 contenidos semanales + 3 historias semanales",
-          "planning": "Planning estratégico de contenidos mensuales. Incluye diseños y copies",
-          "report": "Informe mensual de rendimiento y recomendaciones de mejora"
+          "social-media": "Social Media Management: 3 weekly posts + 3 weekly stories",
+          "planning": "Monthly content strategy planning, including designs and copywriting",
+          "report": "Monthly performance report with improvement recommendations"
         }
       },
       "booster": {
         "title": "Booster Pack",
-        "description": "Incluye Launch Pack, más un impulso publicitario.",
+        "description": "Includes Launch Pack, plus an advertising boost.",
         "features": {
-          "social-media": "Gestión de Redes Sociales: 3 contenidos semanales + 4 historias semanales",
-          "email-marketing": "Email Marketing: 2 envios mensuales",
-          "paid-media": "Pauta Publicitaria en Meta Ads: Diseño de anuncios personalizados y gestión de campañas con optimización continua",
-          "content": "Producción y generación de contenido para Redes Sociales y Pauta"
+          "social-media": "Social Media Management: 3 weekly posts + 4 weekly stories",
+          "email-marketing": "Email Marketing: 2 monthly campaigns",
+          "paid-media": "Meta Ads Advertising: Custom ad design and campaign management with continuous optimization",
+          "content": "Content production for social media and ads"
         }
       },
       "premium": {
         "title": "Premium Pack",
-        "description": "Incluye Booster Pack, más asesorías 1:1.",
+        "description": "Includes Booster Pack, plus 1:1 consulting.",
         "features": {
-          "social-media": "Gestión de Redes Sociales: 4 contenidos semanales + 5 historias semanales",
-          "email-marketing": "Email Marketing: 4 envios mensuales",
-          "paid-media": "Pauta Publicitaria en Meta Ads: Diseño de anuncios personalizados y gestión de campañas con optimización continua",
-          "consulting": "Asesorías 1:1 - Reunión semanal con estrategias a medida para potenciar tu negocio"
+          "social-media": "Social Media Management: 4 weekly posts + 5 weekly stories",
+          "email-marketing": "Email Marketing: 4 monthly campaigns",
+          "paid-media": "Meta Ads & Google Ads Advertising: Custom ad design and campaign management with continuous optimization",
+          "consulting": "1:1 Consulting - Weekly meetings with tailored strategies to scale your business"
         }
       }
     },
-    "cta": "Cotizar"
+    "cta": "Get a quote"
   },
   "clients": {
-    "heading": "Clientes que confían en nosotros"
+    "heading": "Clients who trust us"
   },
   "contact": {
-    "heading": "Impulsamos marcas con creatividad y resultados",
-    "subtitle": "Listo para empezar? Completá el formulario y te contactamos.",
+    "heading": "We grow your business with creativity and results",
+    "subtitle": "Ready to get started? Fill out the form and we'll be in touch.",
     "form": {
-      "name": "Nombre y apellido",
+      "name": "Full name",
       "email": "Email",
-      "phone": "Telefono",
+      "phone": "Phone",
       "service": {
-        "label": "Pack / Servicio",
+        "label": "Pack / Service",
         "options": {
           "packs": {
             "label": "Packs",
@@ -123,38 +123,38 @@
             "premium": "Premium Pack"
           },
           "services": {
-            "label": "Servicios",
+            "label": "Services",
             "social-media": "Social Media & Paid Media",
-            "web-development": "Diseño & Desarrollo Web",
-            "branding": "Identidad & Branding",
-            "content": "Generación de Contenido",
-            "consulting": "Asesoramiento 1:1"
+            "web-development": "Web Design, Development",
+            "branding": "Brand Identity",
+            "content": "Content Creation",
+            "consulting": "1:1 Consulting"
           },
-          "other": "Otros"
+          "other": "Other"
         }
       },
-      "message": "Comentarios",
+      "message": "Comments",
       "cta": "Quiero que me contacten!",
       "errors": {
-        "name-required": "Nombre requerido",
-        "email-invalid": "Email inválido"
+        "name-required": "Name is required",
+        "email-invalid": "Invalid email"
       }
     },
     "aside": {
-      "first": "En The Zeta Space convertimos tus ideas en experiencias que venden.",
-      "second": "Agendá una reunión hoy mismo y descubrí cómo podemos hacer crecer tu marca."
+      "first": "At The Zeta Space, we turn your ideas into digital experiences that sell.",
+      "second": "Schedule a meeting today and discover how we can help your brand grow."
     },
     "success": {
-      "title": "Gracias por tu mensaje!",
-      "description": "Nos pondremos en contacto a la brevedad."
+      "title": "Thank you for contacting us!",
+      "description": "We'll reach out shortly."
     },
     "error": {
-      "title": "Ups! Algo salió mal.",
-      "description": "Por favor, intentá nuevamente."
+      "title": "Oops! Something went wrong.",
+      "description": "Please try again."
     }
   },
   "whatsapp": {
-    "cta": "Contactanos por WhatsApp",
-    "message": "Hola! Estoy interesado en los servicios de The Zeta Space."
+    "cta": "Contact us via WhatsApp",
+    "message": "Hi! I'm interested in The Zeta Space's services."
   }
 }
