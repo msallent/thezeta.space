@@ -35,7 +35,7 @@ export function Menu() {
 
   return (
     <Drawer open={isOpen} onOpenChange={setIsOpen} direction="top">
-      <DrawerTrigger>
+      <DrawerTrigger aria-label={t('label')}>
         <MenuIcon className="size-8 md:size-10 lg:hidden" />
       </DrawerTrigger>
 
