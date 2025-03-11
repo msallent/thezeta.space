@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { useFormContext } from 'react-hook-form';
 import { m } from 'motion/react';
+import { useTranslations } from 'next-intl';
+import { useFormContext } from 'react-hook-form';
 import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
@@ -30,6 +31,8 @@ import { motion } from '@/constants/motion';
 import type { ContactFormData } from './schema';
 
 export function ContactForm() {
+  const t = useTranslations('contact');
+
   const form = useFormContext<ContactFormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -55,17 +58,13 @@ export function ContactForm() {
 
             form.reset();
             setIsSubmitting(false);
-            toast.success('Mensaje enviado!', {
-              description: 'Nos contactaremos a la brevedad.',
-            });
+            toast.success(t('success.title'), { description: t('success.description') });
           });
       });
     } catch (error) {
       console.error(error);
       setIsSubmitting(false);
-      toast.error('Algo salió mal', {
-        description: 'Por favor, intentá de nuevo.',
-      });
+      toast.error(t('error.title'), { description: t('error.description') });
     }
   };
 
@@ -79,7 +78,7 @@ export function ContactForm() {
             render={({ field }) => (
               <m.div custom={0} {...motion.delay}>
                 <FormItem>
-                  <FormLabel>Nombre y apellido</FormLabel>
+                  <FormLabel>{t('form.name')}</FormLabel>
                   <FormControl>
                     <Input type="text" autoComplete="given-name" {...field} />
                   </FormControl>
@@ -95,7 +94,7 @@ export function ContactForm() {
             render={({ field }) => (
               <m.div custom={1} {...motion.delay}>
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t('form.email')}</FormLabel>
                   <FormControl>
                     <Input type="email" autoComplete="email" {...field} />
                   </FormControl>
@@ -111,7 +110,7 @@ export function ContactForm() {
             render={({ field }) => (
               <m.div custom={2} {...motion.delay}>
                 <FormItem>
-                  <FormLabel>Telefono</FormLabel>
+                  <FormLabel>{t('form.phone')}</FormLabel>
                   <FormControl>
                     <Input type="tel" autoComplete="tel" {...field} />
                   </FormControl>
@@ -127,7 +126,7 @@ export function ContactForm() {
             render={({ field: { onChange, ...rest } }) => (
               <m.div custom={3} {...motion.delay}>
                 <FormItem>
-                  <FormLabel>Pack / Servicio</FormLabel>
+                  <FormLabel>{t('form.service.label')}</FormLabel>
                   <Select onValueChange={onChange} {...rest}>
                     <FormControl>
                       <SelectTrigger>
@@ -136,20 +135,36 @@ export function ContactForm() {
                     </FormControl>
                     <SelectContent>
                       <SelectGroup>
-                        <SelectLabel>Packs</SelectLabel>
-                        <SelectItem value="Launch Pack">Launch Pack</SelectItem>
-                        <SelectItem value="Booster Pack">Booster Pack</SelectItem>
-                        <SelectItem value="Premium Pack">Premium Pack</SelectItem>
+                        <SelectLabel>{t('form.service.options.packs.label')}</SelectLabel>
+                        <SelectItem value="Launch Pack">
+                          {t('form.service.options.packs.launch')}
+                        </SelectItem>
+                        <SelectItem value="Booster Pack">
+                          {t('form.service.options.packs.booster')}
+                        </SelectItem>
+                        <SelectItem value="Premium Pack">
+                          {t('form.service.options.packs.premium')}
+                        </SelectItem>
                       </SelectGroup>
                       <SelectGroup>
-                        <SelectLabel>Servicios</SelectLabel>
-                        <SelectItem value="Social Media">Social Media & Paid Media</SelectItem>
-                        <SelectItem value="Desarrollo Web">Diseño & Desarrollo Web</SelectItem>
-                        <SelectItem value="Branding">Identidad & Branding</SelectItem>
-                        <SelectItem value="Contenido">Generación de Contenido</SelectItem>
-                        <SelectItem value="Asesoramiento">Asesoramiento 1:1</SelectItem>
+                        <SelectLabel>{t('form.service.options.services.label')}</SelectLabel>
+                        <SelectItem value="Social Media">
+                          {t('form.service.options.services.social-media')}
+                        </SelectItem>
+                        <SelectItem value="Desarrollo Web">
+                          {t('form.service.options.services.web-development')}
+                        </SelectItem>
+                        <SelectItem value="Branding">
+                          {t('form.service.options.services.branding')}
+                        </SelectItem>
+                        <SelectItem value="Contenido">
+                          {t('form.service.options.services.content')}
+                        </SelectItem>
+                        <SelectItem value="Asesoramiento">
+                          {t('form.service.options.services.consulting')}
+                        </SelectItem>
                       </SelectGroup>
-                      <SelectItem value="Otros">Otros</SelectItem>
+                      <SelectItem value="Otros">{t('form.service.options.other')}</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -165,7 +180,7 @@ export function ContactForm() {
               render={({ field }) => (
                 <m.div custom={4} {...motion.delay}>
                   <FormItem>
-                    <FormLabel>Comentarios</FormLabel>
+                    <FormLabel>{t('form.message')}</FormLabel>
                     <FormControl>
                       <Textarea className="resize-none" {...field} />
                     </FormControl>
@@ -179,7 +194,7 @@ export function ContactForm() {
 
         <m.div custom={5} {...motion.delay}>
           <Button className="mt-10 w-full" type="submit" disabled={isSubmitting}>
-            Quiero que me contacten!
+            {t('form.cta')}
           </Button>
         </m.div>
       </form>

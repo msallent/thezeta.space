@@ -1,14 +1,18 @@
 import { CheckCircle } from 'lucide-react';
 import { m } from 'motion/react';
+import { useTranslations } from 'next-intl';
 import { useFormContext } from 'react-hook-form';
 
 import type { ContactFormData } from '@/components/contact/schema';
 import { Button } from '@/components/ui/button';
 import { motion } from '@/constants/motion';
 import { packs } from '@/constants/packs';
-import { cn } from '@/lib/utils';
+import { cn, formatId } from '@/lib/utils';
 
 export function Packs() {
+  const t = useTranslations('packs');
+  const t2 = useTranslations('navbar');
+
   const { setValue } = useFormContext<ContactFormData>();
 
   return (
@@ -29,32 +33,32 @@ export function Packs() {
       <div className="mx-auto max-w-7xl px-6 md:px-8">
         <m.div className="mx-auto max-w-2xl text-center" {...motion.stagger}>
           <m.p
-            id="packs"
+            id={formatId(t2('packs'))}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
             {...motion.child}
           >
-            Packs
+            {t('title')}
           </m.p>
 
           <m.h2
             className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl"
             {...motion.child}
           >
-            No es magia, es estrategia
+            {t('heading')}
           </m.h2>
 
           <m.p
             className="mx-auto mt-4 w-[16.75rem] font-secondary text-lg/7 text-tertiary md:w-auto"
             {...motion.child}
           >
-            Elegí el pack que mejor se adapte a tu marca!
+            {t('subtitle')}
           </m.p>
         </m.div>
 
         <div className="isolate mx-auto mt-12 grid grid-cols-1 gap-y-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {packs.map(({ name, description, features }, index) => (
+          {packs.map(({ key, features }, index) => (
             <m.div
-              key={name}
+              key={key}
               custom={index}
               className={cn(
                 'flex flex-col justify-between rounded-3xl border border-tertiary p-8 xl:p-10',
@@ -67,10 +71,12 @@ export function Packs() {
             >
               <div>
                 <div className="flex items-center justify-between gap-x-4">
-                  <h3 className="text-lg/7 font-semibold text-secondary">{name}</h3>
+                  <h3 className="text-lg/7 font-semibold text-secondary">
+                    {t(`options.${key}.title`)}
+                  </h3>
                 </div>
 
-                <p className="mt-4 text-sm/6 text-tertiary">{description}</p>
+                <p className="mt-4 text-sm/6 text-tertiary">{t(`options.${key}.description`)}</p>
 
                 <ul role="list" className="mt-8 space-y-3 text-tertiary">
                   {features.map((feature) => (
@@ -79,15 +85,19 @@ export function Packs() {
                         aria-hidden="true"
                         className="h-6 w-5 flex-none text-secondary"
                       />
-                      {feature}
+                      {t(`options.${key}.features.${feature}`)}
                     </li>
                   ))}
                 </ul>
               </div>
 
               <Button asChild>
-                <a onClick={() => setValue('service', name)} href="#contacto" className="mt-8">
-                  Cotizar
+                <a
+                  onClick={() => setValue('service', t(`options.${key}.title`))}
+                  href={`#${formatId(t2('contact'))}`}
+                  className="mt-8"
+                >
+                  {t('cta')}
                 </a>
               </Button>
             </m.div>

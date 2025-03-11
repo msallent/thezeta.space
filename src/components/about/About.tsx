@@ -1,9 +1,14 @@
-import { m } from 'motion/react';
 import { Rocket, Sparkle } from 'lucide-react';
+import { m } from 'motion/react';
+import { useTranslations } from 'next-intl';
 
 import { motion } from '@/constants/motion';
+import { formatId } from '@/lib/utils';
 
 export function About() {
+  const t = useTranslations('about');
+  const t2 = useTranslations('navbar');
+
   return (
     <section className="relative">
       <div
@@ -22,26 +27,25 @@ export function About() {
       <div className="px-6 py-24 sm:py-32 md:px-8">
         <m.div className="mx-auto max-w-2xl text-center" {...motion.stagger}>
           <m.p
-            id="nosotros"
+            id={formatId(t2('about'))}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
             {...motion.child}
           >
-            Nosotros
+            {t('title')}
           </m.p>
 
           <m.h2
             className="mt-2 text-balance text-4xl font-semibold tracking-tight lg:text-7xl"
             {...motion.child}
           >
-            Bienvenidos a The Zeta Space
+            {t('heading')}
           </m.h2>
 
           <m.p
             className="mt-6 text-balance text-lg/7 font-medium text-tertiary sm:text-xl/8"
             {...motion.child}
           >
-            Donde la creatividad de la Generación Z se convierte en estrategias digitales que
-            realmente funcionan.
+            {t('subtitle')}
           </m.p>
         </m.div>
 
@@ -50,27 +54,21 @@ export function About() {
           {...motion.stagger}
         >
           <m.p className="text-center" {...motion.child}>
-            Nuestra misión es llevar tu marca al siguiente nivel con soluciones innovadoras y
-            personalizadas.
+            {t('description')}
           </m.p>
 
-          <m.div className="mt-8 flex flex-col gap-8 md:flex-row md:gap-4" {...motion.child}>
+          <m.div
+            className="mt-8 flex flex-col gap-8 md:flex-row md:justify-center md:gap-4"
+            {...motion.child}
+          >
             <div className="flex gap-4 md:border-r md:border-tertiary-muted md:pr-4">
               <Rocket aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-secondary" />
-
-              <p>
-                Diseñamos equipos a medida para cada proyecto, seleccionando a los mejores expertos
-                en cada área, que se ajusten a las necesidades específicas de tu negocio.
-              </p>
+              <p>{t('columns.first')}</p>
             </div>
 
             <div className="flex gap-4">
               <Sparkle aria-hidden="true" className="mt-0.5 size-6 shrink-0 text-secondary" />
-
-              <p>
-                Creemos en el poder del trabajo en equipo, en la constante búsqueda de resultados
-                concretos y en la capacidad de reinventarnos todos los días.
-              </p>
+              <p>{t('columns.second')}</p>
             </div>
           </m.div>
         </m.div>

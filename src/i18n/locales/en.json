@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "title": "Boost your business with The Zeta Space | Digital Marketing 🚀",
+    "description": "We boost brands with creative digital strategies. Social Media, Paid Media, SEO, Branding and website development. Create, connect and sell in the digital world."
+  },
+  "navbar": {
+    "label": "Open menu",
+    "services": "Services",
+    "about": "About Us",
+    "packs": "Packs",
+    "clients": "Clients",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "We help you grow your business with creativity and results",
+    "cta": "See how we do it"
+  },
+  "services": {
+    "title": "Services",
+    "heading": "Boost your business",
+    "subtitle": "Every service we offer is essential to grow your business and make your brand unforgettable.",
+    "carousel": {
+      "items": {
+        "social-media": {
+          "id": "Social Media",
+          "title": "Social Media",
+          "description": "We create engaging and share-worthy content for your social media, with personalized strategies and measurable results."
+        },
+        "paid-media": {
+          "id": "Social Media",
+          "title": "Paid Media",
+          "description": "Advertise on Meta, Google, TikTok and LinkedIn Ads. Our expert campaign strategies are designed to boost your online presence, attract more potential clients and increase sales."
+        },
+        "web-development": {
+          "id": "Desarrollo Web",
+          "title": "Web and app Design & Development",
+          "description": "We create websites and apps that your users will love. From design to functionality, we craft digital experiences that connect—making everything interactive, seamless and ready to sell."
+        },
+        "branding": {
+          "id": "Branding",
+          "title": "Brand Identity",
+          "description": "We craft unforgettable logos, a striking color palette, and typography that truly represents you, designing a unique visual identity that resonates with your audience in the digital world."
+        },
+        "content": {
+          "id": "Contenido",
+          "title": "Content Creation",
+          "description": "We produce high-quality photos and videos that capture your audience's attention. Because in the digital world, first impressions are visual!"
+        },
+        "consulting": {
+          "id": "Asesoramiento",
+          "title": "1:1 Consulting",
+          "description": "We perfect your brand. Whether for your business or personal brand, we develop tailored strategies with clear objectives and practical solutions to help you grow."
+        }
+      },
+      "cta": "More info",
+      "previous": "Previous slide",
+      "next": "Next slide"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "heading": "Welcome to The Zeta Space",
+    "subtitle": "Where Generation Z creativity turns into digital strategies that truly work.",
+    "description": "Our mission is to take your brand to the next level with innovative and customized solutions.",
+    "columns": {
+      "first": "We build tailor-made teams for each project, selecting the best experts in every area to meet your business's specific needs.",
+      "second": "We believe in the power of teamwork, the constant pursuit of tangible results, and the ability to reinvent ourselves every day."
+    }
+  },
+  "packs": {
+    "title": "Packs",
+    "heading": "It's not magic, it's strategy",
+    "subtitle": "Choose the pack that best suits your brand!",
+    "options": {
+      "launch": {
+        "title": "Launch Pack",
+        "description": "Everything you need to establish your digital presence.",
+        "features": {
+          "social-media": "Social Media Management: 3 weekly posts + 3 weekly stories",
+          "planning": "Monthly content strategy planning, including designs and copywriting",
+          "report": "Monthly performance report with improvement recommendations"
+        }
+      },
+      "booster": {
+        "title": "Booster Pack",
+        "description": "Includes Launch Pack, plus an advertising boost.",
+        "features": {
+          "social-media": "Social Media Management: 3 weekly posts + 4 weekly stories",
+          "email-marketing": "Email Marketing: 2 monthly campaigns",
+          "paid-media": "Meta Ads Advertising: Custom ad design and campaign management with continuous optimization",
+          "content": "Content production for social media and ads"
+        }
+      },
+      "premium": {
+        "title": "Premium Pack",
+        "description": "Includes Booster Pack, plus 1:1 consulting.",
+        "features": {
+          "social-media": "Social Media Management: 4 weekly posts + 5 weekly stories",
+          "email-marketing": "Email Marketing: 4 monthly campaigns",
+          "paid-media": "Meta Ads & Google Ads Advertising: Custom ad design and campaign management with continuous optimization",
+          "consulting": "1:1 Consulting - Weekly meetings with tailored strategies to scale your business"
+        }
+      }
+    },
+    "cta": "Get a quote"
+  },
+  "clients": {
+    "heading": "Clients who trust us"
+  },
+  "contact": {
+    "heading": "We grow your business with creativity and results",
+    "subtitle": "Ready to get started? Fill out the form and we'll be in touch.",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": {
+        "label": "Pack / Service",
+        "options": {
+          "packs": {
+            "label": "Packs",
+            "launch": "Launch Pack",
+            "booster": "Booster Pack",
+            "premium": "Premium Pack"
+          },
+          "services": {
+            "label": "Services",
+            "social-media": "Social Media & Paid Media",
+            "web-development": "Web Design, Development",
+            "branding": "Brand Identity",
+            "content": "Content Creation",
+            "consulting": "1:1 Consulting"
+          },
+          "other": "Other"
+        }
+      },
+      "message": "Comments",
+      "cta": "Inquire now!",
+      "errors": {
+        "name-required": "Name is required",
+        "email-invalid": "Invalid email"
+      }
+    },
+    "aside": {
+      "first": "At The Zeta Space, we turn your ideas into digital experiences that sell.",
+      "second": "Schedule a meeting today and discover how we can help your brand grow."
+    },
+    "success": {
+      "title": "Thank you for contacting us!",
+      "description": "We'll reach out shortly."
+    },
+    "error": {
+      "title": "Oops! Something went wrong.",
+      "description": "Please try again."
+    }
+  },
+  "whatsapp": {
+    "cta": "Contact us via WhatsApp",
+    "message": "Hi! I'm interested in The Zeta Space's services."
+  }
+}

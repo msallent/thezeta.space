@@ -1,15 +1,19 @@
+import { useTranslations } from 'next-intl';
+
 import { Button } from '@/components/ui/button';
 
 export function WhatsApp() {
+  const t = useTranslations('whatsapp');
+
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <Button asChild size="icon" className="size-14 bg-transparent shadow-none">
         <a
           target="_blank"
           rel="noreferrer"
-          href={`https://wa.me/+5491160380070?text=${encodeURIComponent('Hola! Estoy interesado en los servicios de The Zeta Space.')}`}
+          href={`https://wa.me/+5491160380070?text=${encodeURIComponent(t('message'))}`}
         >
-          <span className="sr-only">Contactanos por WhatsApp</span>
+          <span className="sr-only">{t('cta')}</span>
           <svg
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"

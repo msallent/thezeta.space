@@ -1,10 +1,15 @@
 import { m } from 'motion/react';
+import { useTranslations } from 'next-intl';
 
 import { motion } from '@/constants/motion';
+import { formatId } from '@/lib/utils';
 
 import { ContactForm } from './Form';
 
 export function Contact() {
+  const t = useTranslations('contact');
+  const t2 = useTranslations('navbar');
+
   return (
     <section className="relative isolate px-6 py-24 sm:py-32 md:px-8">
       <div
@@ -23,36 +28,31 @@ export function Contact() {
       <div className="mx-auto max-w-xl lg:max-w-4xl">
         <m.div {...motion.stagger}>
           <m.h2
-            id="contacto"
+            id={formatId(t2('contact'))}
             className="-mt-10 text-balance pt-10 text-4xl font-semibold tracking-tight sm:text-5xl"
             {...motion.child}
           >
-            Impulsamos marcas con creatividad y resultados
+            {t('heading')}
           </m.h2>
 
           <m.p
             className="mt-2 text-balance font-secondary text-lg/7 text-tertiary"
             {...motion.child}
           >
-            Listo para empezar? Completá el formulario y te contactamos.
+            {t('subtitle')}
           </m.p>
         </m.div>
 
         <div className="mt-16 flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
           <ContactForm />
 
-          <m.div
+          <m.aside
             className="flex flex-col gap-7 text-center text-lg/7 font-semibold lg:mt-6 lg:w-80 lg:flex-none lg:text-left"
             {...motion.stagger}
           >
-            <m.p {...motion.child}>
-              En The Zeta Space convertimos tus ideas en experiencias que venden.
-            </m.p>
-
-            <m.p {...motion.child}>
-              Agendá una reunión hoy mismo y descubrí cómo podemos hacer crecer tu marca.
-            </m.p>
-          </m.div>
+            <m.p {...motion.child}>{t('aside.first')}</m.p>
+            <m.p {...motion.child}>{t('aside.second')}</m.p>
+          </m.aside>
         </div>
       </div>
     </section>

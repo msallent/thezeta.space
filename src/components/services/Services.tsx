@@ -1,32 +1,36 @@
 import { m } from 'motion/react';
+import { useTranslations } from 'next-intl';
 
 import { motion } from '@/constants/motion';
+import { formatId } from '@/lib/utils';
 
 import { ServicesCarousel } from './Carousel';
 
 export function Services() {
+  const t = useTranslations('services');
+  const t2 = useTranslations('navbar');
+
   return (
     <section className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 md:px-8">
-        <m.div className="mx-auto max-w-2xl text-center" {...motion.stagger}>
+        <m.div className="mx-auto max-w-[620px] text-center" {...motion.stagger}>
           <m.p
-            id="servicios"
+            id={formatId(t2('services'))}
             className="-mt-10 pt-10 text-lg/7 font-semibold text-secondary"
             {...motion.child}
           >
-            Servicios
+            {t('title')}
           </m.p>
 
           <m.h2
             className="mt-2 text-balance text-4xl font-semibold tracking-tight sm:text-5xl"
             {...motion.child}
           >
-            Potenciá tu negocio
+            {t('heading')}
           </m.h2>
 
           <m.p className="mt-4 font-secondary text-lg/7 text-tertiary" {...motion.child}>
-            Cada servicio que ofrecemos es una pieza clave para hacer crecer tu negocio
-            <br /> y que tu marca sea inolvidable.
+            {t('subtitle')}
           </m.p>
         </m.div>
 
