@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Potenciá tu negocio con The Zeta Space | Marketing Digital 🚀",
-    "description": "Impulsamos marcas con estrategias digitales creativas. Social Media, Paid Media, SEO, Branding y Web. Creá, conectá y vendé en el mundo digital."
+    "title": "Boost your business with The Zeta Space | Digital Marketing 🚀",
+    "description": "We boost brands with creative digital strategies. Social Media, Paid Media, SEO, Branding and website development. Create, connect and sell in the digital world."
   },
   "navbar": {
     "label": "Open menu",
@@ -24,12 +24,12 @@
         "social-media": {
           "id": "Social Media",
           "title": "Social Media",
-          "description": "Creamos contenido de valor, atractivo e interactivo para tus Redes Sociales, con estrategias personalizadas y resultados medibles."
+          "description": "We create engaging and share-worthy content for your social media, with personalized strategies and measurable results."
         },
         "paid-media": {
           "id": "Social Media",
           "title": "Paid Media",
-          "description": "Invertí en plataformas digitales: Meta, Google, Tiktok, Linkedin Ads. Las manejamos con precisión de expertos para maximizar resultados mientras optimizamos cada peso invertido. Acá no se desperdicia nada!"
+          "description": "Advertise on Meta, Google, TikTok and LinkedIn Ads. Our expert campaign strategies are designed to boost your online presence, attract more potential clients and increase sales."
         },
         "web-development": {
           "id": "Desarrollo Web",
@@ -135,7 +135,7 @@
         }
       },
       "message": "Comments",
-      "cta": "Quiero que me contacten!",
+      "cta": "Inquire now!",
       "errors": {
         "name-required": "Name is required",
         "email-invalid": "Invalid email"
