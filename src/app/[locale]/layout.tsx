@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: Omit<LayoutProps, 'children'>
       title,
       description,
       type: 'website',
-      url: 'https://www.thezeta.space',
+      url: 'https://thezeta.space',
     },
   };
 }

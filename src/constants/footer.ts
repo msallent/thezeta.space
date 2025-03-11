@@ -13,7 +13,7 @@ export const links = [
   },
   {
     name: 'LinkedIn',
-    href: '#',
+    href: 'https://linkedin.com/company/thezetaspace/',
     Icon: Linkedin,
   },
 ];
